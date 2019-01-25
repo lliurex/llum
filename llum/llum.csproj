@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27727C7A-AA1A-4D4E-8D7D-CEB66060C8C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>llum</RootNamespace>
+    <AssemblyName>llum</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="xmlrpcnet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6">
+      <Private>False</Private>
+      <Package>newtonsoft-json</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rsrc\watch.gif" />
+    <EmbeddedResource Include="..\rsrc\llum.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="AnimatedButton.cs" />
+    <Compile Include="XmlrpcClient.cs" />
+    <Compile Include="LoginWidget.cs" />
+    <Compile Include="gtk-gui\llum.LoginWidget.cs" />
+    <Compile Include="ChangeOwnPassword.cs" />
+    <Compile Include="gtk-gui\llum.ChangeOwnPassword.cs" />
+    <Compile Include="SearchUser.cs" />
+    <Compile Include="gtk-gui\llum.SearchUser.cs" />
+    <Compile Include="EditUser.cs" />
+    <Compile Include="gtk-gui\llum.EditUser.cs" />
+    <Compile Include="LdapUser.cs" />
+    <Compile Include="DeleteUserWidget.cs" />
+    <Compile Include="gtk-gui\llum.DeleteUserWidget.cs" />
+    <Compile Include="ProgressWindow.cs" />
+    <Compile Include="gtk-gui\llum.ProgressWindow.cs" />
+    <Compile Include="AddUser.cs" />
+    <Compile Include="gtk-gui\llum.AddUser.cs" />
+    <Compile Include="PromoteUserWidget.cs" />
+    <Compile Include="gtk-gui\llum.PromoteUserWidget.cs" />
+    <Compile Include="SearchGroupWidget.cs" />
+    <Compile Include="gtk-gui\llum.SearchGroupWidget.cs" />
+    <Compile Include="LdapGroup.cs" />
+    <Compile Include="EditGroupWidget.cs" />
+    <Compile Include="gtk-gui\llum.EditGroupWidget.cs" />
+    <Compile Include="DemoteUserWidget.cs" />
+    <Compile Include="gtk-gui\llum.DemoteUserWidget.cs" />
+    <Compile Include="DeleteGroupsWidget.cs" />
+    <Compile Include="gtk-gui\llum.DeleteGroupsWidget.cs" />
+    <Compile Include="AddGroupWidget.cs" />
+    <Compile Include="gtk-gui\llum.AddGroupWidget.cs" />
+    <Compile Include="AddGenericUsersWidget.cs" />
+    <Compile Include="gtk-gui\llum.AddGenericUsersWidget.cs" />
+    <Compile Include="PasswordListWidget.cs" />
+    <Compile Include="gtk-gui\llum.PasswordListWidget.cs" />
+    <Compile Include="DeleteEveryUserWidget.cs" />
+    <Compile Include="gtk-gui\llum.DeleteEveryUserWidget.cs" />
+    <Compile Include="GescenImportWidget.cs" />
+    <Compile Include="gtk-gui\llum.GescenImportWidget.cs" />
+    <Compile Include="DeleteHomeWidget.cs" />
+    <Compile Include="gtk-gui\llum.DeleteHomeWidget.cs" />
+    <Compile Include="FreezeWidget.cs" />
+    <Compile Include="gtk-gui\llum.FreezeWidget.cs" />
+    <Compile Include="ResetPasswordsWidget.cs" />
+    <Compile Include="gtk-gui\llum.ResetPasswordsWidget.cs" />
+    <Compile Include="RegenerateHomesWidget.cs" />
+    <Compile Include="gtk-gui\llum.RegenerateHomesWidget.cs" />
+    <Compile Include="ImportExportWidget.cs" />
+    <Compile Include="gtk-gui\llum.ImportExportWidget.cs" />
+    <Compile Include="ReadOnlyAdminWidget.cs" />
+    <Compile Include="gtk-gui\llum.ReadOnlyAdminWidget.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

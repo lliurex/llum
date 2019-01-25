@@ -1,0 +1,771 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2011-08-30 09:06:07+0200\n"
+"PO-Revision-Date: 2011-08-30 09:06:07+0200\n"
+"Last-Translator: hector\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: MonoDevelop Gettext addin\n"
+
+#: ../llum/gtk-gui/MainWindow.cs:40
+msgid "Llum - Lliurex User Manager"
+msgstr ""
+
+#: ../llum/XmlrpcClient.cs:137
+msgid "Conexión al servidor con éxito"
+msgstr ""
+
+#: ../llum/XmlrpcClient.cs:141
+msgid "Conexión al servidor fallida"
+msgstr ""
+
+#: ../llum/LoginWidget.cs:18
+msgid "Classroom Server"
+msgstr ""
+
+#: ../llum/LoginWidget.cs:19
+msgid "Center Server"
+msgstr ""
+
+#: ../llum/LoginWidget.cs:66
+msgid "Connected to LDAP as: "
+msgstr ""
+
+#: ../llum/LoginWidget.cs:118
+msgid "User and/or password are incorrect."
+msgstr ""
+
+#: ../llum/LoginWidget.cs:124
+msgid "There was an error trying to connect to the n4d(XMLRPC) server"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.LoginWidget.cs:85
+msgid "User"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.LoginWidget.cs:114
+#: ../llum/gtk-gui/llum.AddUser.cs:272
+msgid "Password"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.LoginWidget.cs:145
+msgid "Connect to"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.LoginWidget.cs:195
+msgid "Enter your user and password"
+msgstr ""
+
+#: ../llum/ChangeOwnPassword.cs:16
+#: ../llum/ChangeOwnPassword.cs:81
+#: ../llum/ChangeOwnPassword.cs:103
+msgid "Enter old password"
+msgstr ""
+
+#: ../llum/ChangeOwnPassword.cs:24
+#: ../llum/ChangeOwnPassword.cs:88
+#: ../llum/ChangeOwnPassword.cs:110
+msgid "New passwords do not match"
+msgstr ""
+
+#: ../llum/ChangeOwnPassword.cs:44
+msgid "Change Own Password"
+msgstr ""
+
+#: ../llum/ChangeOwnPassword.cs:73
+msgid "Could not change password."
+msgstr ""
+
+#: ../llum/gtk-gui/llum.ChangeOwnPassword.cs:94
+msgid "Change your password"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.ChangeOwnPassword.cs:114
+msgid "Enter your old password:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.ChangeOwnPassword.cs:146
+msgid "Enter your new password:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.ChangeOwnPassword.cs:178
+msgid "Re-enter your new password:"
+msgstr ""
+
+#: ../llum/SearchUser.cs:189
+msgid "There was an error connecting to the n4d(XMLRPC) server"
+msgstr ""
+
+#: ../llum/SearchUser.cs:216
+msgid "Search User"
+msgstr ""
+
+#: ../llum/SearchUser.cs:223
+#: ../llum/DeleteUserWidget.cs:64
+#: ../llum/gtk-gui/llum.AddUser.cs:213
+#: ../llum/PromoteUserWidget.cs:53
+#: ../llum/DemoteUserWidget.cs:65
+#: ../llum/DeleteGroupsWidget.cs:94
+msgid "User ID"
+msgstr ""
+
+#: ../llum/SearchUser.cs:230
+#: ../llum/GescenImportWidget.cs:56
+#: ../llum/GescenImportWidget.cs:80
+msgid "Group"
+msgstr ""
+
+#: ../llum/SearchUser.cs:239
+#: ../llum/gtk-gui/llum.EditUser.cs:464
+#: ../llum/DeleteUserWidget.cs:73
+#: ../llum/gtk-gui/llum.AddUser.cs:151
+#: ../llum/PromoteUserWidget.cs:62
+#: ../llum/DemoteUserWidget.cs:74
+#: ../llum/DeleteGroupsWidget.cs:103
+#: ../llum/gtk-gui/llum.AddGroupWidget.cs:117
+msgid "Name"
+msgstr ""
+
+#: ../llum/SearchUser.cs:246
+#: ../llum/gtk-gui/llum.EditUser.cs:493
+#: ../llum/DeleteUserWidget.cs:80
+#: ../llum/gtk-gui/llum.AddUser.cs:182
+#: ../llum/PromoteUserWidget.cs:69
+#: ../llum/DemoteUserWidget.cs:81
+#: ../llum/DeleteGroupsWidget.cs:110
+msgid "Surname"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:89
+msgid "Search user"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:107
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:105
+msgid "Search filter:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:175
+msgid "Edit User"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:202
+msgid "Promote User/s"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:229
+msgid "Demote User/s"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchUser.cs:256
+msgid "Delete User/s"
+msgstr ""
+
+#: ../llum/EditUser.cs:89
+msgid "Belongs to"
+msgstr ""
+
+#: ../llum/EditUser.cs:102
+msgid "Available groups"
+msgstr ""
+
+#: ../llum/EditUser.cs:198
+#: ../llum/EditUser.cs:281
+msgid "Group modification successful"
+msgstr ""
+
+#: ../llum/EditUser.cs:313
+msgid "Personal data changed successfully"
+msgstr ""
+
+#: ../llum/EditUser.cs:357
+msgid "User password changed successfully"
+msgstr ""
+
+#: ../llum/EditUser.cs:362
+msgid "Password cannot be empty"
+msgstr ""
+
+#: ../llum/EditUser.cs:377
+msgid "NIA edited succesfully"
+msgstr ""
+
+#: ../llum/EditUser.cs:382
+#: ../llum/EditUser.cs:398
+msgid "There was an error trying to edit this user"
+msgstr ""
+
+#: ../llum/EditUser.cs:393
+msgid "NIF edited successfully "
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:197
+msgid "User details"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:218
+msgid "<b>User ID#</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:229
+msgid "label6"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:250
+msgid "<b>User ID</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:261
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:179
+msgid "label3"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:282
+msgid "<b>Group</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:293
+msgid "label8"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:342
+#: ../llum/gtk-gui/llum.AddUser.cs:303
+msgid "NIA"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:371
+#: ../llum/gtk-gui/llum.AddUser.cs:334
+msgid "DNI"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:419
+msgid "<b>Identification Number</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:592
+msgid "Enter new password"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:622
+msgid "Re-enter new password"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:661
+msgid "<b>Change password</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:675
+msgid "<b>Edit user personal data</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditUser.cs:775
+msgid "<b>Edit user groups</b>"
+msgstr ""
+
+#: ../llum/DeleteUserWidget.cs:115
+msgid ""
+"The following users were removed from the to-be-deleted list for security "
+"reasons"
+msgstr ""
+
+#: ../llum/DeleteUserWidget.cs:125
+#: ../llum/DeleteEveryUserWidget.cs:83
+msgid "Deleting users..."
+msgstr ""
+
+#: ../llum/DeleteUserWidget.cs:179
+#: ../llum/DeleteEveryUserWidget.cs:133
+#: ../llum/DeleteHomeWidget.cs:133
+msgid "Deletion successful"
+msgstr ""
+
+#: ../llum/DeleteUserWidget.cs:181
+msgid "Go back"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteUserWidget.cs:79
+msgid "Delete Users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteUserWidget.cs:94
+#: ../llum/gtk-gui/llum.DeleteGroupsWidget.cs:102
+msgid "The follwing users are going to be deleted:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.ProgressWindow.cs:23
+msgid "ProgressWindow"
+msgstr ""
+
+#: ../llum/AddUser.cs:23
+#: ../llum/AddGenericUsersWidget.cs:42
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:100
+#: ../llum/DeleteEveryUserWidget.cs:23
+#: ../llum/DeleteHomeWidget.cs:25
+msgid "Students"
+msgstr ""
+
+#: ../llum/AddUser.cs:24
+#: ../llum/AddGenericUsersWidget.cs:43
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:112
+#: ../llum/DeleteEveryUserWidget.cs:24
+#: ../llum/DeleteHomeWidget.cs:26
+msgid "Teachers"
+msgstr ""
+
+#: ../llum/AddUser.cs:25
+#: ../llum/AddGenericUsersWidget.cs:44
+msgid "Other"
+msgstr ""
+
+#: ../llum/AddUser.cs:34
+msgid "Add User"
+msgstr ""
+
+#: ../llum/AddUser.cs:91
+#: ../llum/AddUser.cs:115
+#: ../llum/AddUser.cs:137
+msgid "User created successfully"
+msgstr ""
+
+#: ../llum/AddUser.cs:96
+#: ../llum/AddUser.cs:120
+#: ../llum/AddUser.cs:142
+msgid "Error creating user: "
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddUser.cs:131
+msgid "Add user"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddUser.cs:244
+msgid "Template"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddUser.cs:368
+msgid ""
+"* NIA/DNI fields are optional, but if present, they will help the "
+"re-importation process"
+msgstr ""
+
+#: ../llum/PromoteUserWidget.cs:101
+msgid ""
+"The following users were removed from the to-be-promoted list as they don't "
+"belong to the teachers group"
+msgstr ""
+
+#: ../llum/PromoteUserWidget.cs:121
+msgid "There was an error when promoting"
+msgstr ""
+
+#: ../llum/PromoteUserWidget.cs:123
+msgid "Users successfully promoted to admins"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.PromoteUserWidget.cs:79
+msgid "Promote Users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.PromoteUserWidget.cs:94
+msgid "The following users are going to be promoted:"
+msgstr ""
+
+#: ../llum/SearchGroupWidget.cs:70
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:87
+msgid "Search Group"
+msgstr ""
+
+#: ../llum/SearchGroupWidget.cs:77
+#: ../llum/DeleteGroupsWidget.cs:57
+msgid "Group ID"
+msgstr ""
+
+#: ../llum/SearchGroupWidget.cs:86
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:247
+#: ../llum/DeleteGroupsWidget.cs:64
+#: ../llum/gtk-gui/llum.AddGroupWidget.cs:148
+#: ../llum/GescenImportWidget.cs:73
+msgid "Description"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:164
+msgid "Edit Group"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:191
+msgid "Promote Users from Group/s"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:218
+msgid "Demote Users from Group/s"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:245
+msgid "Delete Group/s"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.SearchGroupWidget.cs:272
+msgid "Delete Users from Group/s"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:115
+msgid "All"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:134
+msgid "Users in this group"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:149
+msgid "Available users"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:219
+msgid "Description changed succesfully"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:224
+msgid "There was an error changing group description"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:295
+msgid "Users were removed from this group successfully"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:298
+#: ../llum/EditGroupWidget.cs:391
+msgid "The following errors were returned: "
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:388
+msgid "Users were added to this group successfully"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:406
+msgid "Changing User passwords..."
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:436
+msgid "Passwords were successfully changed"
+msgstr ""
+
+#: ../llum/EditGroupWidget.cs:442
+msgid "Some errors were found when changing passwords:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:149
+msgid "Group Details"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:169
+msgid "<b>Group GID#</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:199
+msgid "<b>Group GID</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:209
+msgid "label5"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:308
+msgid "<b>Edit Description</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:403
+msgid "<b>Change password to every user in this group:</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:427
+msgid "Enter password:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:457
+msgid "Re-enter password:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.EditGroupWidget.cs:511
+msgid "<b>Edit Users</b>"
+msgstr ""
+
+#: ../llum/DemoteUserWidget.cs:26
+msgid "Some errors where found when executing the demoting operation:"
+msgstr ""
+
+#: ../llum/DemoteUserWidget.cs:35
+msgid "Users were succesfully demoted"
+msgstr ""
+
+#: ../llum/DemoteUserWidget.cs:113
+msgid ""
+"The following users were removed from the to-be-demoted list as they don't "
+"belong to the teachers group"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DemoteUserWidget.cs:79
+msgid "Demote Users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DemoteUserWidget.cs:94
+msgid "The following users are going to be demoted:"
+msgstr ""
+
+#: ../llum/DeleteGroupsWidget.cs:133
+msgid "Deleting groups and users..."
+msgstr ""
+
+#: ../llum/DeleteGroupsWidget.cs:135
+msgid "Deleting groups only..."
+msgstr ""
+
+#: ../llum/DeleteGroupsWidget.cs:187
+msgid "Errors were found when deleting groups:"
+msgstr ""
+
+#: ../llum/DeleteGroupsWidget.cs:193
+msgid "Group Deletion successful"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteGroupsWidget.cs:87
+msgid "Delete Groups"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteGroupsWidget.cs:127
+msgid "Delete users belonging to those groups"
+msgstr ""
+
+#: ../llum/AddGroupWidget.cs:32
+msgid "Groups cannot end with a numerical character"
+msgstr ""
+
+#: ../llum/AddGroupWidget.cs:68
+msgid "Add Group"
+msgstr ""
+
+#: ../llum/AddGroupWidget.cs:117
+msgid "Group successfully added"
+msgstr ""
+
+#: ../llum/AddGroupWidget.cs:119
+msgid "An error was found when adding group:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGroupWidget.cs:97
+msgid "Add group"
+msgstr ""
+
+#: ../llum/AddGenericUsersWidget.cs:37
+msgid "You must create a group before adding generic users"
+msgstr ""
+
+#: ../llum/AddGenericUsersWidget.cs:54
+msgid "Add Generic Users"
+msgstr ""
+
+#: ../llum/AddGenericUsersWidget.cs:126
+msgid "Creating generic users..."
+msgstr ""
+
+#: ../llum/AddGenericUsersWidget.cs:163
+msgid "The following users were created:"
+msgstr ""
+
+#: ../llum/AddGenericUsersWidget.cs:269
+msgid "User sample:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:136
+msgid "Add generic users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:154
+msgid "Add users to this group"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:188
+msgid "Users template"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:214
+msgid "Number of users to create"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:253
+msgid "Generic name"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:303
+msgid "Random password"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:322
+msgid "Same as user name"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:341
+msgid "Same password for every user"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.AddGenericUsersWidget.cs:370
+msgid "Password generation"
+msgstr ""
+
+#: ../llum/PasswordListWidget.cs:36
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:79
+msgid "Get password list"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:124
+msgid "All users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:163
+msgid "Generate list"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.PasswordListWidget.cs:183
+msgid ""
+"<b>Important:</b> Student list is the only list up to date. \n"
+"Once a teacher manually changes his/her password, it's no longer updated in "
+"these lists."
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:19
+msgid "User Deletion tool"
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:25
+#: ../llum/DeleteHomeWidget.cs:28
+msgid "Everyone"
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:50
+msgid "You are about to delete every student. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:54
+msgid "You are about to delete every teacher. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:58
+msgid "You are about to delete every user. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteEveryUserWidget.cs:137
+msgid "There was an error when deleting users"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteEveryUserWidget.cs:79
+msgid "Delete every user"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteEveryUserWidget.cs:130
+msgid "<b>Users to delete</b>"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteEveryUserWidget.cs:142
+#: ../llum/gtk-gui/llum.DeleteHomeWidget.cs:142
+msgid "* You will be asked to confirm this action"
+msgstr ""
+
+#: ../llum/GescenImportWidget.cs:23
+msgid "Import Gescen/Itaca file"
+msgstr ""
+
+#: ../llum/GescenImportWidget.cs:49
+msgid "Importable"
+msgstr ""
+
+#: ../llum/GescenImportWidget.cs:200
+#: ../llum/GescenImportWidget.cs:243
+msgid "Importing users and groups..."
+msgstr ""
+
+#: ../llum/GescenImportWidget.cs:213
+#: ../llum/GescenImportWidget.cs:270
+msgid "Importation successful"
+msgstr ""
+
+#: ../llum/GescenImportWidget.cs:219
+#: ../llum/GescenImportWidget.cs:288
+msgid "Importation failed"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:107
+msgid "Gescen Importation"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:122
+msgid "Select GESCEN/ITACA file:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:133
+msgid "Select a file"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:195
+msgid "Importation Mode:"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:206
+msgid "Partial"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:231
+msgid "Clear selection"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:247
+msgid "Complete"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.GescenImportWidget.cs:330
+msgid ""
+"This is a list of users from previous Gescen/Itaca importations that were not "
+"found in the current xml.\n"
+"<b>Do you want to delete them?</b>"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:21
+msgid "Clear user's /home"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:27
+msgid "Others"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:51
+msgid "You are about to clear every student's home. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:55
+msgid "You are about to clear every teacher's home. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:59
+msgid "You are about to clear every other's home. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:64
+msgid "You are about to clear every user's home. Are you sure?"
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:78
+msgid "Cleaning /home directories..."
+msgstr ""
+
+#: ../llum/DeleteHomeWidget.cs:137
+msgid "There was an error when deleting homes"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteHomeWidget.cs:79
+msgid "Clear /home contents tool"
+msgstr ""
+
+#: ../llum/gtk-gui/llum.DeleteHomeWidget.cs:130
+msgid "<b>Group of homes to delete</b>"
+msgstr ""
+

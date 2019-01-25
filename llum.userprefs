@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="llum/llum.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="llum/ImportExportWidget.cs">
+    <Files>
+      <File FileName="llum/Main.cs" Line="1" Column="1" />
+      <File FileName="llum/XmlrpcClient.cs" Line="1" Column="1" />
+      <File FileName="llum/ImportExportWidget.cs" Line="121" Column="4" />
+      <File FileName="llum/ResetPasswordsWidget.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

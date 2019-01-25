@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+	
+
+	@media print
+        {
+            .table{display: table;width:100%}
+            .row{display: table-row;}
+            .left , .middle, .right{font-family : "Ubuntu";display: table-cell;padding: 0 20px;border-bottom: solid 1px;}
+            .impar .left , .impar .middle, .impar .right{border-bottom: dotted 1px;}
+            .middle{border-left: solid 1px;border-right:solid 1px;}
+            .header{font-weight: bold;display: table-header-group;}
+            .hidden{visibility:hidden;}
+            .header .left,.header .right,.header .middle{border-bottom: solid 6px;}
+        }
+        @media screen
+        {
+            .table{display: table; width:100%}
+            .row{display: table-row;}
+            .left , .middle, .right{font-family : "Cantarell";display: table-cell;padding: 0 20px;border-bottom: solid 1px;}
+            .impar .left , .impar .middle, .impar .right{background-color:#cff;}
+            .middle{border-left: solid 1px;border-right:solid 1px;}
+            .header{font-weight: bold;display: table-header-group;}
+            .header .left,.header .right,.header .middle{border-bottom: solid 10px;}
+        }
+        </style>
+	 <meta content="text/html;" http-equiv="content-type" charset="utf-8">
+    </head>
+    <body>
+        <input type="button" class="hidden" value="%%PRINT%%" onclick="window.print();">
+        <div class="table">
+            <div class="row header">
+                <div class="left">%%NAME%%</div>
+                <div class="middle">%%USER%%</div>
+                <div class="right">%%PASSWORD%%</div>
+            </div>
+
+	
+	
+
+

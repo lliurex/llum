@@ -1,0 +1,15 @@
+Name=llum
+Name[en]=LDAP users management
+Name[qcv]=Gestió d'usuaris en l'Ldap
+Name[ca_ES@valencia]=Gestió d'usuaris en l'Ldap
+Name[es]=Gestión de Usuarios en Ldap
+Comment=Llum
+Comment[en]=Llum
+Comment[es]=Llum
+Comment[qcv]=Llum
+Comment[ca]=Llum
+Icon=llum
+Category=System
+ScriptPath=llum.zmd
+Service=False
+Groups=teachers;admin;admins;students;adm
