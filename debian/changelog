@@ -1,3 +1,9 @@
+llum (3.31.2) bionic; urgency=high
+
+  * python-webkit not available... for now
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 28 Jan 2019 13:42:02 +0100
+
 llum (3.31.1) bionic; urgency=medium
 
   * Removing llxcfg from rules
