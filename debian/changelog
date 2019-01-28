@@ -1,3 +1,9 @@
+llum (3.31.1) bionic; urgency=medium
+
+  * Removing llxcfg from rules
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 28 Jan 2019 09:17:01 +0100
+
 llum (3.31) bionic; urgency=medium
 
   * First bionic release
