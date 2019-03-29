@@ -12,4 +12,4 @@ Icon=llum
 Category=System
 ScriptPath=llum.zmd
 Service=False
-Groups=teachers;admin;admins;students;adm
+Groups=teachers;admin;admins;students;sudo
