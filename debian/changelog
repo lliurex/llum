@@ -1,3 +1,9 @@
+llum (3.31.3) bionic; urgency=medium
+
+  * Adding sudo group
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 29 Mar 2019 13:13:22 +0100
+
 llum (3.31.2) bionic; urgency=high
 
   * python-webkit not available... for now
