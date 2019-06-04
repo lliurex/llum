@@ -46,7 +46,6 @@ build: build-stamp
 build-stamp: configure-stamp 
 	dh_testdir
 	LC_CTYPE=C.UTF-8 LANG=C.UTF-8 LC_NUMERIC=C.UTF-8 LC_TIME=C.UTF-8 LC_NAME=C.UTF-8 LC_ALL=C.UTF-8 xbuild
-	make banners
 	touch build-stamp
 
 clean:
@@ -54,7 +53,6 @@ clean:
 	dh_testroot
 	rm -f build-stamp configure-stamp
 
-	$(MAKE) banners-clean
 	-rm -rf build installtmp
 	rm -rf $(MONO_SHARED_DIR)/.wapi
 	dh_clean 
