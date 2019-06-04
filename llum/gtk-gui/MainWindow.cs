@@ -33,7 +33,7 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("Llum - Lliurex User Manager");
-		//this.Icon = global::Stetic.IconLoader.LoadIcon (this, "llum", global::Gtk.IconSize.Menu);
+		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "llum", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.mainHBox = new global::Gtk.HBox ();
