@@ -18,18 +18,6 @@ LINK_COLOR    = \x1b[31;01m
 clean: 
 	rm -rf bin/
 	rm -f lliurex-control-center.pidb
-	@echo -e '$(LINK_COLOR)* Cleaning [$@]$(NO_COLOR)'
-	@$(MAKE) -C banners-rsrc/ $@
-
-banners:
-	@echo -e '$(LINK_COLOR)* Building [$@]$(NO_COLOR)'
-	@$(MAKE) -C banners-rsrc/ -j2 $@
-	
-banners-clean:
-	@echo -e '$(LINK_COLOR)* Cleaning [$@]$(NO_COLOR)'
-	@$(MAKE) -C banners-rsrc/ $@
-	
-
 
 release: $(SOURCES)
 	mkdir -p bin/Release/
