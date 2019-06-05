@@ -9,7 +9,6 @@ Name[es]=Gestión de Usuarios en Ldap
 Comment=Llum
 Comment[en]=Llum
 Comment[es]=Llum
-Comment[qcv]=Llum
 Comment[ca_ES@valencia]=Llum
 Exec=llum
 Terminal=false
