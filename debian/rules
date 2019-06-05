@@ -1,0 +1,98 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+## for 1.0 ICSharpCode.SharpZipLib.dll
+#libmono-sharpzip0.6-cil
+## for 2.0 ICSharpCode.SharpZipLib.dll
+#libmono-sharpzip2.84-cil
+
+
+export MONO_SHARED_DIR=$(CURDIR)
+
+UPVERSION = $(shell dpkg-parsechangelog | grep ^Vers | cut -d\  -f2 | sed 's,-.*,,' | sed 's/.dfsg.*$$//')
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+	INSTALL_PROGRAM += -s
+endif
+
+update-po:
+	cp -f llumTranslation/messages.po lliurex-po/llum/llum.pot
+	cp -f llumTranslation/es.po lliurex-po/llum/es.po
+	cp -f llumTranslation/qcv.po lliurex-po/llum/ca@valencia.po
+
+
+configure: configure-stamp 
+configure-stamp: update-po 
+	dh_testdir
+
+	mkdir -p $(MONO_SHARED_DIR)/.wapi
+	
+	touch configure-stamp
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+	LC_CTYPE=C.UTF-8 LANG=C.UTF-8 LC_NUMERIC=C.UTF-8 LC_TIME=C.UTF-8 LC_NAME=C.UTF-8 LC_ALL=C.UTF-8 xbuild
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	-rm -rf build installtmp
+	rm -rf $(MONO_SHARED_DIR)/.wapi
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	mv  llum/bin/Debug/* $(CURDIR)/debian/llum/usr/lib/llum
+	find $(CURDIR)/debian/llum/usr/lib/llum -type f -exec chmod a-x {} \;
+	install -c -m755 debian/llum.sh $(CURDIR)/debian/llum/usr/bin/llum
+	
+
+	
+
+# Build architecture-independent files here.
+binary-arch: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+	dh_install
+	dh_llxsrcinstall
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+	
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure 
