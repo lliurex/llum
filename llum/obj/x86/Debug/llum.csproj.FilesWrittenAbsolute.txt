@@ -1,8 +1,0 @@
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/llum.gtk-gui.gui.stetic
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/llum.watch.gif
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/llum.llum.svg
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/bin/Debug/llum.exe.mdb
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/bin/Debug/llum.exe
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/llum.exe
-/home/cless/svn/xenial/llum/trunk/fuentes/llum/obj/x86/Debug/llum.exe.mdb
