@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: llum
 Architecture: all
-Depends: mono-runtime, xmlrpcnet, python, libnewtonsoft-json5.0-cil
+Depends: mono-runtime, xmlrpcnet, python, libgtk2.0-cil, libnewtonsoft-json5.0-cil
 Description: Lliurex Users Manager
  Tool to create and manage user network accounts
 
