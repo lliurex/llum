@@ -16,4 +16,5 @@ Terminal=false
 Icon=llum
 Type=Application
 GenericName=llum
+NoDisplay=true
 Categories=LliureX-Administration;
