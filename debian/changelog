@@ -2,6 +2,7 @@ llum (3.31.5) bionic; urgency=medium
 
   * Icons work
   * Fixed dependencies
+  * Fixed password browser. Using default browser now
 
  -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 05 Jun 2019 15:37:03 +0200
 
