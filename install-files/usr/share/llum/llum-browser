@@ -61,7 +61,10 @@ if __name__ == '__main__':
         url = sys.argv[1]
     else:
         url = DEFAULT_URL
- 
+    
+    os.system("xdg-open url")
+    sys.exit(9)
+
     # PyWebkitGTK necesita habilitar el soporte de los hilos en PyGTK
     gtk.gdk.threads_init()
     browser = SimpleBrowser()
