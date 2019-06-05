@@ -8,11 +8,6 @@ public partial class MainWindow : Gtk.Window
 	public MainWindow () : base(Gtk.WindowType.Toplevel)
 	{
 		Build ();
-		
-		
-		
-	//	button=new llum.AnimatedButton("textolargo",true);
-	//	buttonVbox.PackStart(button,false,true,0);
 	}
 
 	
