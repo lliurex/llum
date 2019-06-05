@@ -10,7 +10,6 @@ public partial class MainWindow : Gtk.Window
 		Build ();
 		
 		
-		this.SetIconFromFile("/usr/share/pixmaps/llum.png");
 	//	button=new llum.AnimatedButton("textolargo",true);
 	//	buttonVbox.PackStart(button,false,true,0);
 	}
