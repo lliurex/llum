@@ -171,8 +171,6 @@ namespace llum
 					llum.Core.getCore().server="https://"+System.Net.Dns.GetHostEntry("server").AddressList[0].ToString()+":9779";
 
 
-				Console.WriteLine(System.Net.Dns.GetHostEntry("server").AddressList[0].ToString());
-				Console.WriteLine(System.Net.Dns.GetHostEntry("server").AddressList[1].ToString());
 				client.Url=llum.Core.getCore().server;
 				//Core.getCore().mw.statusText=Mono.Unix.Catalog.GetString("Conexión al servidor con éxito");
 			}
