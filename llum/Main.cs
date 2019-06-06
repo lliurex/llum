@@ -36,7 +36,7 @@ namespace llum
 					llum.Core.getCore().server="https://"+master_server_ip+":9779";
 					llum.Core.getCore().xmlrpc=new XmlrpcClient();
 					try{
-							Console.WriteLine (llum.Core.getCore().xmlrpc.get_methods());
+							llum.Core.getCore().xmlrpc.get_methods();
 							Gtk.Application.Invoke(delegate{
 						
 								llum.Core.getCore().mw.enableIcon(true);
