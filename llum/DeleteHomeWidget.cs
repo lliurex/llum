@@ -17,7 +17,7 @@ namespace llum
 		{
 			this.Build ();
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-delete",Gtk.IconSize.Dnd);
+			image.SetFromIconName("dialog-cancel",Gtk.IconSize.Dnd);
 			image.Show();
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Clear user's /home"));
 			label.Show();			

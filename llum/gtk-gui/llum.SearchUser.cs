@@ -203,7 +203,7 @@ namespace llum
 			this.deleteUsersButton.UseUnderline = true;
 			this.deleteUsersButton.Label = global::Mono.Unix.Catalog.GetString ("Delete User/s");
 			global::Gtk.Image w16 = new global::Gtk.Image ();
-			w16.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-delete", global::Gtk.IconSize.Menu);
+			w16.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "dialog-cancel", global::Gtk.IconSize.Menu);
 			this.deleteUsersButton.Image = w16;
 			this.vbox2.Add (this.deleteUsersButton);
 			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.deleteUsersButton]));

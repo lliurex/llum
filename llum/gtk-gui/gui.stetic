@@ -822,7 +822,7 @@
                             <property name="Sensitive">False</property>
                             <property name="CanFocus">True</property>
                             <property name="Type">TextAndIcon</property>
-                            <property name="Icon">stock:gtk-delete Menu</property>
+                            <property name="Icon">stock:dialog-cancel Menu</property>
                             <property name="Label" translatable="yes">Delete User/s</property>
                             <property name="UseUnderline">True</property>
                             <signal name="Clicked" handler="OnDeleteUsersButtonClicked" />
@@ -1744,7 +1744,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image52">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-delete Dialog</property>
+                        <property name="Pixbuf">stock:dialog-cancel Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -2751,7 +2751,7 @@
                             <property name="Sensitive">False</property>
                             <property name="CanFocus">True</property>
                             <property name="Type">TextAndIcon</property>
-                            <property name="Icon">stock:gtk-delete Menu</property>
+                            <property name="Icon">stock:dialog-cancel Menu</property>
                             <property name="Label" translatable="yes">Delete Group/s</property>
                             <property name="UseUnderline">True</property>
                             <signal name="Clicked" handler="OnDeleteGroupsButtonClicked" />
@@ -2769,7 +2769,7 @@
                             <property name="Sensitive">False</property>
                             <property name="CanFocus">True</property>
                             <property name="Type">TextAndIcon</property>
-                            <property name="Icon">stock:gtk-delete Menu</property>
+                            <property name="Icon">stock:dialog-cancel Menu</property>
                             <property name="Label" translatable="yes">Delete Users from Group/s</property>
                             <property name="UseUnderline">True</property>
                             <signal name="Clicked" handler="OnDeleteUsersButtonClicked" />
@@ -3553,7 +3553,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image52">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-delete Dialog</property>
+                        <property name="Pixbuf">stock:dialog-cancel Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -4672,7 +4672,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
             <child>
               <widget class="Gtk.Image" id="image1">
                 <property name="MemberName" />
-                <property name="Pixbuf">stock:gtk-delete Dialog</property>
+                <property name="Pixbuf">stock:dialog-cancel Dialog</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -5396,7 +5396,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
             <child>
               <widget class="Gtk.Image" id="image1">
                 <property name="MemberName" />
-                <property name="Pixbuf">stock:gtk-delete Dialog</property>
+                <property name="Pixbuf">stock:dialog-cancel Dialog</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -5638,7 +5638,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
                 <child>
                   <widget class="Gtk.Image" id="image230">
                     <property name="MemberName" />
-                    <property name="Pixbuf">stock:application-vnd.appimage Dialog</property>
+                    <property name="Pixbuf">stock:frostwire Dialog</property>
                   </widget>
                   <packing>
                     <property name="Position">0</property>
