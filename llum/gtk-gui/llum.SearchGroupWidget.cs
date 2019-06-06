@@ -190,7 +190,7 @@ namespace llum
 			this.deleteGroupsButton.UseUnderline = true;
 			this.deleteGroupsButton.Label = global::Mono.Unix.Catalog.GetString ("Delete Group/s");
 			global::Gtk.Image w15 = new global::Gtk.Image ();
-			w15.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-delete", global::Gtk.IconSize.Menu);
+			w15.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "dialog-cancel", global::Gtk.IconSize.Menu);
 			this.deleteGroupsButton.Image = w15;
 			this.vbox2.Add (this.deleteGroupsButton);
 			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.deleteGroupsButton]));
@@ -205,7 +205,7 @@ namespace llum
 			this.deleteUsersButton.UseUnderline = true;
 			this.deleteUsersButton.Label = global::Mono.Unix.Catalog.GetString ("Delete Users from Group/s");
 			global::Gtk.Image w17 = new global::Gtk.Image ();
-			w17.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-delete", global::Gtk.IconSize.Menu);
+			w17.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "dialog-cancel", global::Gtk.IconSize.Menu);
 			this.deleteUsersButton.Image = w17;
 			this.vbox2.Add (this.deleteUsersButton);
 			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.deleteUsersButton]));

@@ -27,7 +27,7 @@ namespace llum
 			msgLabel.Text="";
 			
 			image=new Gtk.Image();
-			image.SetFromIconName("application-vnd.appimage",Gtk.IconSize.Dnd);
+			image.SetFromIconName("frostwire",Gtk.IconSize.Dnd);
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Freeze Users"));
 			label.Show();
 			
