@@ -20,7 +20,7 @@ namespace llum
 			this.Build ();
 			
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-dnd",Gtk.IconSize.Dnd);
+			image.SetFromIconName("document-new",Gtk.IconSize.Dnd);
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Import Gescen/Itaca file"));
 			label.Show();	
 			
