@@ -1,3 +1,10 @@
+llum (3.31.8) bionic; urgency=medium
+
+  * Added python3-poinstaller support when building
+  * Renamed valencian translation
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 06 Jun 2019 11:59:30 +0200
+
 llum (3.31.7) bionic; urgency=medium
 
   * Removed debug messages
