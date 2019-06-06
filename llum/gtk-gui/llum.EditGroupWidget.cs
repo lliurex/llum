@@ -130,7 +130,7 @@ namespace llum
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.image230 = new global::Gtk.Image ();
 			this.image230.Name = "image230";
-			this.image230.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "stock_people", global::Gtk.IconSize.Dialog);
+			this.image230.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "folder-public", global::Gtk.IconSize.Dialog);
 			this.hbox1.Add (this.image230);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.image230]));
 			w1.Position = 0;

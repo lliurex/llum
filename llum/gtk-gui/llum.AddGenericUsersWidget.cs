@@ -108,7 +108,7 @@ namespace llum
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.image11 = new global::Gtk.Image ();
 			this.image11.Name = "image11";
-			this.image11.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "stock_person", global::Gtk.IconSize.Dialog);
+			this.image11.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "actor", global::Gtk.IconSize.Dialog);
 			this.hbox3.Add (this.image11);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.image11]));
 			w1.Position = 0;

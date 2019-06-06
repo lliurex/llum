@@ -34,7 +34,7 @@ namespace llum
 		{
 			this.Build ();
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-dialog-authentication",Gtk.IconSize.Dnd);
+			image.SetFromIconName("system-lock-screen",Gtk.IconSize.Dnd);
 			image.Show();
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Get password list"));
 			label.Show();

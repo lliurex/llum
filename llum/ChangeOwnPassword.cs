@@ -40,7 +40,7 @@ namespace llum
 		{
 			
 			image=new Gtk.Image();
-			image.SetFromIconName("stock_keyring",Gtk.IconSize.Dnd);
+			image.SetFromIconName("system-lock-screen",Gtk.IconSize.Dnd);
 			
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Change Own Password"));
 			label.Show();

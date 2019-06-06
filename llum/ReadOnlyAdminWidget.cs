@@ -17,7 +17,7 @@ namespace llum
 
 
 			image=new Gtk.Image();
-			image.SetFromIconName("stock_person",Gtk.IconSize.Dnd);
+			image.SetFromIconName("actor",Gtk.IconSize.Dnd);
 			image.Show();
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("LDAP Read-Only Admin"));
 			label.Show();

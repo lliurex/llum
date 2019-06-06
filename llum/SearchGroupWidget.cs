@@ -66,7 +66,7 @@ namespace llum
 		{
 			this.Build ();
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-find",Gtk.IconSize.Dnd);
+			image.SetFromIconName("system-search",Gtk.IconSize.Dnd);
 			
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Search Group"));
 			label.Show();		
