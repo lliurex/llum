@@ -1,3 +1,9 @@
+llum (3.31.7) bionic; urgency=medium
+
+  * Removed debug messages
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 06 Jun 2019 11:50:09 +0200
+
 llum (3.31.6) bionic; urgency=medium
 
   * Icons work
