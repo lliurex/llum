@@ -75,7 +75,7 @@ namespace llum
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.image1 = new global::Gtk.Image ();
 			this.image1.Name = "image1";
-			this.image1.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "stock_keyring", global::Gtk.IconSize.Dialog);
+			this.image1.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "system-lock-screen", global::Gtk.IconSize.Dialog);
 			this.hbox1.Add (this.image1);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.image1]));
 			w1.Position = 0;

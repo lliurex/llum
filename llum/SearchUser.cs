@@ -243,7 +243,7 @@ namespace llum
 			
 			userTreeview.Selection.Mode=Gtk.SelectionMode.Multiple;
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-find",Gtk.IconSize.Dnd);
+			image.SetFromIconName("system-search",Gtk.IconSize.Dnd);
 			
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Search User"));
 			label.Show();			

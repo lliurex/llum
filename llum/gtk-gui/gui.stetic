@@ -402,7 +402,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_keyring Dialog</property>
+                        <property name="Pixbuf">stock:system-lock-screen Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -651,7 +651,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-find Dialog</property>
+                        <property name="Pixbuf">stock:system-search Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -893,7 +893,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_person Dialog</property>
+                        <property name="Pixbuf">stock:actor Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -1943,7 +1943,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image11">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_person Dialog</property>
+                        <property name="Pixbuf">stock:actor Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -2597,7 +2597,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-find Dialog</property>
+                        <property name="Pixbuf">stock:system-search Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -2832,7 +2832,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image230">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_people Dialog</property>
+                        <property name="Pixbuf">stock:folder-public Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -3773,7 +3773,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image11">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_people Dialog</property>
+                        <property name="Pixbuf">stock:folder-public Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -4002,7 +4002,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image11">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_person Dialog</property>
+                        <property name="Pixbuf">stock:actor Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -4478,7 +4478,7 @@
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-dialog-authentication Dialog</property>
+                        <property name="Pixbuf">stock:system-lock-screen Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -5997,7 +5997,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
             <child>
               <widget class="Gtk.Image" id="image1">
                 <property name="MemberName" />
-                <property name="Pixbuf">stock:gtk-dialog-authentication Dialog</property>
+                <property name="Pixbuf">stock:system-lock-screen Dialog</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -6190,7 +6190,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
                     <child>
                       <widget class="Gtk.Image" id="image1">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:gtk-refresh Dialog</property>
+                        <property name="Pixbuf">stock:view-refresh Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -6605,7 +6605,7 @@ Once a teacher manually changes his/her password, it's no longer updated in thes
                     <child>
                       <widget class="Gtk.Image" id="image52">
                         <property name="MemberName" />
-                        <property name="Pixbuf">stock:stock_person Dialog</property>
+                        <property name="Pixbuf">stock:actor Dialog</property>
                       </widget>
                       <packing>
                         <property name="Position">0</property>

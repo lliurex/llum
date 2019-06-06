@@ -15,7 +15,7 @@ namespace llum
 			this.Build ();
 			
 			image=new Gtk.Image();
-			image.SetFromIconName("gtk-refresh",Gtk.IconSize.Dnd);
+			image.SetFromIconName("view-refresh",Gtk.IconSize.Dnd);
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("/net operations"));
 			label.Show();				
 			
