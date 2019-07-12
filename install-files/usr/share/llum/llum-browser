@@ -10,5 +10,5 @@ if __name__ == '__main__':
     else:
         url = "http://lliurex.net"
     
-    os.system("xdg-open url")
+    os.system("xdg-open %s"%url)
     sys.exit(9)
