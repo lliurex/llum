@@ -1,3 +1,9 @@
+llum (3.31.9) bionic; urgency=high
+
+  * Fixed URL
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 12 Jul 2019 10:11:49 +0200
+
 llum (3.31.8) bionic; urgency=medium
 
   * Added python3-poinstaller support when building
