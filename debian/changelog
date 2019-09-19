@@ -1,3 +1,9 @@
+llum (3.31.10) bionic; urgency=medium
+
+  * Adding .html to password file
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 19 Sep 2019 12:19:48 +0200
+
 llum (3.31.9) bionic; urgency=high
 
   * Fixed URL
