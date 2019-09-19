@@ -191,7 +191,7 @@ namespace llum
 			string file_name="/tmp/." + RandomString(10);
 			
 			while(System.IO.File.Exists(file_name))
-				file_name="/tmp/." + RandomString(10);
+				file_name="/tmp/." + RandomString(10) + ".html";
 			
 			System.IO.StreamWriter sw=new System.IO.StreamWriter(file_name);
 			sw.Write(final_html);
