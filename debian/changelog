@@ -1,3 +1,9 @@
+llum (3.31.12) bionic; urgency=medium
+
+  * Added libmono-posix4.0 dependency
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 02 Jul 2020 11:15:29 +0200
+
 llum (3.31.11) bionic; urgency=medium
 
   * Added libmono-posix4.0 dependency
