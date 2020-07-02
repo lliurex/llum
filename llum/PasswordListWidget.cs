@@ -188,7 +188,7 @@ namespace llum
 			
 			final_html+=close_html;
 			
-			string file_name="/tmp/." + RandomString(10);
+			string file_name="/tmp/." + RandomString(10) + ".html";
 			
 			while(System.IO.File.Exists(file_name))
 				file_name="/tmp/." + RandomString(10) + ".html";
