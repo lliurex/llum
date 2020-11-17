@@ -23,7 +23,7 @@ namespace llum
 			}
 			else
 			{
-				llum.Core.getCore().server="https://localhost:9779";
+				llum.Core.getCore().server="https://server:9779";
 				llum.Core.getCore().xmlrpc=new XmlrpcClient();
 				
 				System.Threading.Thread thread;
@@ -36,14 +36,13 @@ namespace llum
 					llum.Core.getCore().server="https://"+master_server_ip+":9779";
 					llum.Core.getCore().xmlrpc=new XmlrpcClient();
 					try{
+							if(!System.IO.File.Exists("/etc/auto.lliurex"))
+								throw new Exception("Forcing fallback to local server. N4D will handle remote ldap connection");
 							llum.Core.getCore().xmlrpc.get_methods();
 							Gtk.Application.Invoke(delegate{
-						
 								llum.Core.getCore().mw.enableIcon(true);
-					
 							});
-							if(!System.IO.File.Exists("/lib/systemd/system/net-server\\x2dsync.mount"))
-								throw new Exception("Forcing fallback to local server. N4D will handle remote ldap connection");
+
 						}
 					catch
 						{
@@ -61,15 +60,9 @@ namespace llum
 				}
 
 				};
-			
-				thread=new System.Threading.Thread(tstart);
-			
-				thread.Start();
-				
-				
-							
 				Gdk.Threads.Init();
-			
+				thread=new System.Threading.Thread(tstart);
+				thread.Start();
 				Application.Run ();
 			}
 		}
