@@ -1,3 +1,10 @@
+llum (3.31.13) bionic; urgency=medium
+
+  * changing nfs check to autofs file
+  * default url is server
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 17 Nov 2020 10:36:31 +0100
+
 llum (3.31.12) bionic; urgency=medium
 
   * Added libmono-posix4.0 dependency
