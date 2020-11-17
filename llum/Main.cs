@@ -61,8 +61,8 @@ namespace llum
 
 				};
 				Gdk.Threads.Init();
-				thread=new System.Threading.Thread(tstart);
-				thread.Start();
+				//thread=new System.Threading.Thread(tstart);
+				//thread.Start();
 				Application.Run ();
 			}
 		}
