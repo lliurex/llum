@@ -1,3 +1,9 @@
+llum (3.31.20) focal; urgency=medium
+
+  * First focal release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 26 Feb 2021 11:38:19 +0100
+
 llum (3.31.13) bionic; urgency=medium
 
   * changing nfs check to autofs file
