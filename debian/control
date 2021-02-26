@@ -2,12 +2,12 @@ Source: llum
 Section: admin
 Priority: optional
 Maintainer: Equipo LliureX <lliurex@gva.es>
-Build-Depends: debhelper (>= 7.0), cdbs, llxsrchelper,  mono-dmcs, libgtk2.0-cil-dev, xmlrpcnet, pkg-config, mono-xbuild, libmono-microsoft-build-tasks-v4.0-4.0-cil, libnewtonsoft-json-cil-dev, python3-poinstaller
+Build-Depends: debhelper (>= 7.0), cdbs, llxsrchelper,  mono-mcs, libgtk2.0-cil-dev, xmlrpcnet, pkg-config, mono-xbuild, mono-dev,libmono-microsoft-build-tasks-v4.0-4.0-cil, libnewtonsoft-json-cil-dev, python3-poinstaller
 Standards-Version: 3.8.4
 
 Package: llum
 Architecture: all
-Depends: mono-runtime, xmlrpcnet, python, libgtk2.0-cil, libnewtonsoft-json5.0-cil, libmono-posix4.0-cil
+Depends: mono-runtime, xmlrpcnet, python3, libgtk2.0-cil, libnewtonsoft-json5.0-cil, libmono-posix4.0-cil
 Description: Lliurex Users Manager
  Tool to create and manage user network accounts
 
