@@ -336,17 +336,22 @@ namespace llum
 		{
 			//tring add_user(string[]user_info,string class_name,string plantille,string uid,string name,string surname,string password);			
 			llum.Core core=llum.Core.getCore();
-			string ret="";
+			string old_ret="";
+			CookComputing.XmlRpc.XmlRpcStruct ret;
 			try
 			{
-				ret=client.add_user(core.user_info,"Golem",plantille,user_properties,false);	
+				ret=client.add_user(core.user_info,"Golem",plantille,user_properties,false);
+				if(ret.ContainsKey("status"))
+					if(ret["status"]==0)
+						old_ret=ret["return"]
+						
 			}
 			catch(Exception e)
 			{
 				Console.WriteLine(e);
-				ret="XMLRPC ERROR";	
+				old_ret="XMLRPC ERROR";	
 			}
-			return ret;
+			return old_ret;
 			
 			
 		}
