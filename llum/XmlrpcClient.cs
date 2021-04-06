@@ -343,7 +343,7 @@ namespace llum
 				ret=client.add_user(core.user_info,"Golem",plantille,user_properties,false);
 				if(ret.ContainsKey("status"))
 					if(ret["status"]==0)
-						old_ret=ret["return"]
+						old_ret=ret["return"];
 						
 			}
 			catch(Exception e)
