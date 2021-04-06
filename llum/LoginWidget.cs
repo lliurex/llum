@@ -1,6 +1,8 @@
 
 using System;
 
+using CookComputing.XmlRpc.XmlRpcStruct;
+
 namespace llum
 {
 
@@ -42,7 +44,7 @@ namespace llum
 			try
 			{
 			
-				string ret=core.xmlrpc.client.login(user_info,"Golem",user_info);
+				CookComputing.XmlRpc.XmlRpcStruct ret=core.xmlrpc.client.login(user_info,"Golem",user_info);
 				
 				if(ret.Contains("true"))
 				{

@@ -13,9 +13,9 @@ namespace llum
 	public interface Client : IXmlRpcProxy
 	{
 		[XmlRpcMethod]
-		string login(string[] user_info, string class_name,string[] user_pass);
+		CookComputing.XmlRpc.XmlRpcStruct login(string[] user_info, string class_name,string[] user_pass);
 		[XmlRpcMethod]
-		string add_user(string[]user_info,string class_name,string plantille, CookComputing.XmlRpc.XmlRpcStruct user_properties,bool generic);
+		CookComputing.XmlRpc.XmlRpcStruct add_user(string[]user_info,string class_name,string plantille, CookComputing.XmlRpc.XmlRpcStruct user_properties,bool generic);
 		[XmlRpcMethod]
 		string exist_home_or_create(string[]user_info,string class_name, CookComputing.XmlRpc.XmlRpcStruct user_properties);
 		[XmlRpcMethod]
@@ -342,8 +342,8 @@ namespace llum
 			{
 				ret=client.add_user(core.user_info,"Golem",plantille,user_properties,false);
 				if(ret.ContainsKey("status"))
-					if(ret["status"]==0)
-						old_ret=ret["return"];
+					if(Convert.ToInt32(ret["status"])==0)
+						old_ret=Convert.ToString(ret["return"]);
 						
 			}
 			catch(Exception e)
