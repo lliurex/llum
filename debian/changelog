@@ -1,3 +1,9 @@
+llum (3.32) focal; urgency=medium
+
+  * Add users manually supported
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 06 May 2021 09:59:47 +0200
+
 llum (3.31.22) focal; urgency=medium
 
   * First focal release
