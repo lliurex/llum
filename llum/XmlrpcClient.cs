@@ -59,7 +59,7 @@ namespace llum
 		[XmlRpcMethod]
 		CookComputing.XmlRpc.XmlRpcStruct del_teacher_from_admins(string[] user_info, string class_name,string uid);
 		[XmlRpcMethod]
-		string delete_group(string[] user_info,string class_name,string gid);
+		CookComputing.XmlRpc.XmlRpcStruct delete_group(string[] user_info,string class_name,string gid);
 		[XmlRpcMethod]
 		System.Array light_get_user_list(string[] user_info,string class_name);
 		[XmlRpcMethod]
@@ -257,7 +257,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 			
 			return ret;
 		}
@@ -276,7 +278,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 			
 			return ret;
 			
@@ -296,7 +300,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 			
 			return ret;
 			
@@ -316,7 +322,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 			
 			return ret;
 		}
@@ -334,7 +342,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 
 			return ret;
 			
@@ -353,7 +363,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
+			}
 			
 
 			return ret;
@@ -476,7 +488,9 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="XMLRPC ERROR";
+			}
 
 			return ret;
 			
@@ -496,8 +510,10 @@ namespace llum
 					ret=(string)new_ret["return"];
 			}
 			catch
+			{
 				ret="false";
-
+			}
+			
 			return ret;
 
 		}
