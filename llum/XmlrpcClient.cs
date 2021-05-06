@@ -17,53 +17,47 @@ namespace llum
 		[XmlRpcMethod]
 		CookComputing.XmlRpc.XmlRpcStruct add_user(string[]user_info,string class_name,string plantille, CookComputing.XmlRpc.XmlRpcStruct user_properties,bool generic);
 		[XmlRpcMethod]
-		string exist_home_or_create(string[]user_info,string class_name, CookComputing.XmlRpc.XmlRpcStruct user_properties);
+		CookComputing.XmlRpc.XmlRpcStruct exist_home_or_create(string[]user_info,string class_name, CookComputing.XmlRpc.XmlRpcStruct user_properties);
 		[XmlRpcMethod]
-		bool restore_groups_folders(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct restore_groups_folders(string[]user_info,string class_name);
 		[XmlRpcMethod]
-		System.Array restore_acls(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct restore_acls(string[]user_info,string class_name);
 		[XmlRpcMethod]
-		bool restore_acls_via_thread(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct restore_acls_via_thread(string[]user_info,string class_name);
 		[XmlRpcMethod]
-		bool is_acl_thread_alive(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct is_acl_thread_alive(string[]user_info,string class_name);
 		[XmlRpcMethod]
-		string[] get_students_function_list(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct get_admin_function_list(string[]user_info,string class_name);
 		[XmlRpcMethod]
-		string[] get_teachers_function_list(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct change_own_password(string[] user_info, string class_name, string[] user_info2, string new_password);
 		[XmlRpcMethod]
-		string[] get_admin_function_list(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct get_student_list(string[] user_info, string class_name);
 		[XmlRpcMethod]
-		string[] get_others_function_list(string[]user_info,string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct get_user_list(string[] user_info, string class_name,string filter);
 		[XmlRpcMethod]
-		string change_own_password(string[] user_info, string class_name, string[] user_info2, string new_password);
+		CookComputing.XmlRpc.XmlRpcStruct get_available_groups(string[] user_info, string class_name);
 		[XmlRpcMethod]
-		System.Array get_student_list(string[] user_info, string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct add_to_group(string[] user_info, string class_name, string uid, string group_name);
 		[XmlRpcMethod]
-		System.Array get_user_list(string[] user_info, string class_name,string filter);
+		CookComputing.XmlRpc.XmlRpcStruct remove_from_group(string[] user_info, string class_name, string uid, string group_name);
 		[XmlRpcMethod]
-		System.Array get_available_groups(string[] user_info, string class_name);
+		CookComputing.XmlRpc.XmlRpcStruct change_student_personal_data(string[] user_info, string class_name, string uid, string name, string surname);
 		[XmlRpcMethod]
-		string add_to_group(string[] user_info, string class_name, string uid, string group_name);
+		CookComputing.XmlRpc.XmlRpcStruct change_password(string[] user_info,string class_name,string path, string password,string uid, string cn, string sn, bool auto);
 		[XmlRpcMethod]
-		string remove_from_group(string[] user_info, string class_name, string uid, string group_name);
+		CookComputing.XmlRpc.XmlRpcStruct change_student_password(string[] user_info,string class_name,string uid, string password);
 		[XmlRpcMethod]
-		string change_student_personal_data(string[] user_info, string class_name, string uid, string name, string surname);
+		CookComputing.XmlRpc.XmlRpcStruct delete_student(string[] user_info,string class_name, string uid, bool delete_data);
 		[XmlRpcMethod]
-		string change_password(string[] user_info,string class_name,string path, string password,string uid, string cn, string sn, bool auto);
+		CookComputing.XmlRpc.XmlRpcStruct delete_teacher(string[] user_info,string class_name, string uid, bool delete_data);
 		[XmlRpcMethod]
-		string change_student_password(string[] user_info,string class_name,string uid, string password);
+		CookComputing.XmlRpc.XmlRpcStruct delete_other(string[] user_info, string class_name, string uid, bool delete_data);
 		[XmlRpcMethod]
-		string delete_student(string[] user_info,string class_name, string uid, bool delete_data);
+		CookComputing.XmlRpc.XmlRpcStruct add_teacher_to_admins(string[] user_info,string class_name,string uid);
 		[XmlRpcMethod]
-		string delete_teacher(string[] user_info,string class_name, string uid, bool delete_data);
+		CookComputing.XmlRpc.XmlRpcStruct change_group_description(string[] user_info,string class_name,string gid, string description);
 		[XmlRpcMethod]
-		string delete_other(string[] user_info, string class_name, string uid, bool delete_data);
-		[XmlRpcMethod]
-		string add_teacher_to_admins(string[] user_info,string class_name,string uid);
-		[XmlRpcMethod]
-		string change_group_description(string[] user_info,string class_name,string gid, string description);
-		[XmlRpcMethod]
-		string del_teacher_from_admins(string[] user_info, string class_name,string uid);
+		CookComputing.XmlRpc.XmlRpcStruct del_teacher_from_admins(string[] user_info, string class_name,string uid);
 		[XmlRpcMethod]
 		string delete_group(string[] user_info,string class_name,string gid);
 		[XmlRpcMethod]
@@ -123,7 +117,7 @@ namespace llum
 		[XmlRpcMethod]
 		string get_methods();
 		[XmlRpcMethod]
-		string get_variable(string user_info,string class_name,string variable_name);
+		CookComputing.XmlRpc.XmlRpcStruct get_variable(string user_info,string class_name,string variable_name);
 		[XmlRpcMethod]
 		System.Array export_llum_info(string[] user_info,string class_name);
 		[XmlRpcMethod]
@@ -185,7 +179,7 @@ namespace llum
 		{
 			try
 			{
-				return client.get_variable("","VariablesManager","MASTER_SERVER_IP");
+				return (string)client.get_variable("","VariablesManager","MASTER_SERVER_IP")["return"];
 			}
 			catch
 			{
@@ -198,7 +192,8 @@ namespace llum
 		public System.Collections.Generic.List<string> get_available_groups()
 		{
 			llum.Core core=llum.Core.getCore();
-			System.Array groups=client.get_available_groups(core.user_info,"Golem");
+			CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_available_groups(core.user_info,"Golem");
+			System.Array groups=((System.Array)new_ret["return"]);
 			System.Collections.Generic.List<string> group_list=new System.Collections.Generic.List<string>();
 			foreach(CookComputing.XmlRpc.XmlRpcStruct item in groups)
 				group_list.Add(((string[])item["cn"])[0]);
@@ -211,7 +206,8 @@ namespace llum
 		public System.Collections.Generic.List<llum.LdapGroup> get_available_groups_info()
 		{
 			llum.Core core=llum.Core.getCore();
-			System.Array groups=client.get_available_groups(core.user_info,"Golem");
+			CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_available_groups(core.user_info,"Golem");
+			System.Array groups=((System.Array)new_ret["return"]);
 			
 			System.Collections.Generic.List<llum.LdapGroup> group_list=new System.Collections.Generic.List<llum.LdapGroup>();
 			
@@ -228,7 +224,7 @@ namespace llum
 					public string path;				
 				*/
 
-				string gid=	((string[])item["cn"])[0];
+				string gid=((string[])item["cn"])[0];
 				string gid_number=((string[])item["gidNumber"])[0];
 				string description=((string[])item["description"])[0];
 				System.Collections.Generic.List<string> member_list=new System.Collections.Generic.List<string>();
@@ -251,40 +247,116 @@ namespace llum
 		public string add_to_group(string user, string group_name)
 		{
 			llum.Core core=llum.Core.getCore();
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.add_to_group(core.user_info,"Golem",user,group_name);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
 			
-			return client.add_to_group(core.user_info,"Golem",user,group_name);
+			return ret;
 		}
 
 		public string remove_from_group(string user,string group_name)
 		{
 			llum.Core core=llum.Core.getCore();
 			
-			return client.remove_from_group(core.user_info,"Golem",user,group_name);
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.remove_from_group(core.user_info,"Golem",user,group_name);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+			
+			return ret;
+			
 		}
 		
 		public string change_student_personal_data(string user, string name, string surname)
 		{
 			llum.Core core=llum.Core.getCore();
 			
-			return client.change_student_personal_data(core.user_info,"Golem",user,name,surname);
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.change_student_personal_data(core.user_info,"Golem",user,name,surname);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+			
+			return ret;
+			
+
 		}
 		
 		public string change_student_password(string uid, string password)
 		{
 			llum.Core core=llum.Core.getCore();
-			return client.change_student_password(core.user_info,"Golem",uid,password);
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.change_student_password(core.user_info,"Golem",uid,password);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+			
+			return ret;
 		}
 		
 		public string change_password(string path, string password,bool auto)
 		{
 			llum.Core core=llum.Core.getCore();
-			return client.change_password(core.user_info,"Golem",path,password,"","","",auto);
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.change_password(core.user_info,"Golem",path,password,"","","",auto);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+
+			return ret;
+			
 		}
 		
 		public string change_teacher_password(string path, string password,string uid, string cn, string sn, bool auto)
 		{
 			llum.Core core=llum.Core.getCore();
-			return client.change_password(core.user_info,"Golem",path,password,uid,cn,sn,auto);
+			string ret;
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.change_password(core.user_info,"Golem",path,password,uid,cn,sn,auto);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+			
+
+			return ret;
 		}
 		
 		public string delete_student(string uid, bool delete_data)
@@ -293,7 +365,12 @@ namespace llum
 			string ret="";
 			try
 			{
-				ret=client.delete_student(core.user_info,"Golem",uid, delete_data);
+				
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_student(core.user_info,"Golem",uid, delete_data);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];
 			}
 			catch
 			{
@@ -308,7 +385,11 @@ namespace llum
 			string ret="";
 			try
 			{
-				ret=client.delete_other(core.user_info,"Golem",uid, delete_data);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_other(core.user_info,"Golem",uid, delete_data);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];
 			}
 			catch
 			{
@@ -323,7 +404,12 @@ namespace llum
 			string ret="";
 			try
 			{
-				ret=client.delete_teacher(core.user_info,"Golem",uid, delete_data);
+				//ret=client.delete_teacher(core.user_info,"Golem",uid, delete_data);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_teacher(core.user_info,"Golem",uid, delete_data);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];
 			}
 			catch
 			{
@@ -361,11 +447,15 @@ namespace llum
 			string ret="";
 			try
 			{
-				ret=client.add_teacher_to_admins(core.user_info,"Golem",uid);
+				//ret=client.add_teacher_to_admins(core.user_info,"Golem",uid);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.add_teacher_to_admins(core.user_info,"Golem",uid);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];
 			}
 			catch
 			{
-				Console.WriteLine(ret);
 				ret="XMLRPC ERROR";
 			}
 			
@@ -376,21 +466,40 @@ namespace llum
 		{
 			llum.Core core=llum.Core.getCore();
 			string ret="";
+			
 			try
 			{
-				ret=client.del_teacher_from_admins(core.user_info,"Golem",uid);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.del_teacher_from_admins(core.user_info,"Golem",uid);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];
 			}
 			catch
-			{
 				ret="XMLRPC ERROR";
-			}
+
 			return ret;
+			
+
 		}
 		
 		public string change_group_description(string gid, string description)
 		{
 			llum.Core core=llum.Core.getCore();
-			return client.change_group_description(core.user_info,"Golem",gid,description);	
+			string ret="";
+			try
+			{
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.change_group_description(core.user_info,"Golem",gid,description);	
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="false";
+				else
+					ret=(string)new_ret["return"];
+			}
+			catch
+				ret="false";
+
+			return ret;
+
 		}
 		
 		public System.Collections.Generic.List<LdapUser>get_user_list()
@@ -399,8 +508,11 @@ namespace llum
 
 			try
 			{
-				System.Array array=client.get_user_list(core.user_info,"Golem","*");
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_user_list(core.user_info,"Golem","*");
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					return null;
 				
+				System.Array array=(System.Array)new_ret["return"];
 				System.Collections.Generic.List<LdapUser> user_list=new System.Collections.Generic.List<LdapUser>();
 				
 				foreach(CookComputing.XmlRpc.XmlRpcStruct item in array)
@@ -475,13 +587,19 @@ namespace llum
 			
 			try
 			{
-				ret=client.delete_group(core.user_info,"Golem",gid);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_group(core.user_info,"Golem",gid);
+				if(Convert.ToInt32(new_ret["status"])!=0)
+					ret="XMLRPC ERROR";
+				else
+					ret=(string)new_ret["return"];				
 			}
 			catch
 			{
 				ret="XMLRPC ERROR";
 			}
 			return ret;
+			
+			
 		}
 		
 		public System.Collections.Generic.List<LdapUser>  light_get_user_list()
@@ -1027,17 +1145,23 @@ namespace llum
 			
 			try
 			{
-				llum.Core core=llum.Core.getCore();	
-				System.Array ret=client.restore_acls(core.user_info,"NetFoldersManager");
-
-				if((bool)ret.GetValue(0))
+				llum.Core core=llum.Core.getCore();
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.restore_acls(core.user_info,"NetFoldersManager");
+				if(Convert.ToInt32(new_ret["status"])==0)
 				{
-					return null;
+					System.Array ret=(System.Array)new_ret["return"];
+
+					if((bool)ret.GetValue(0))
+					{
+						return null;
+					}
+					else
+					{
+						return (string)ret.GetValue(1);	
+					}
 				}
 				else
-				{
-					return (string)ret.GetValue(1);	
-				}
+					return (string)new_ret["msg"];
 			}
 			catch(Exception e)
 			{
@@ -1052,9 +1176,20 @@ namespace llum
 			try
 			{
 				llum.Core core=llum.Core.getCore();
-				bool ret=client.restore_acls_via_thread(core.user_info,"NetFoldersManager");
-								
-				return ret;
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.restore_acls_via_thread(core.user_info,"NetFoldersManager");
+				
+				if(Convert.ToInt32(new_ret["status"])==0)
+				{
+					return (bool)new_ret["return"];
+
+
+				}
+				else
+				{
+					Console.WriteLine((string)new_ret["msg"]);
+					return false;
+				}
+				
 			}
 			catch(Exception e)
 			{
@@ -1069,11 +1204,24 @@ namespace llum
 			try
 			{
 				llum.Core core=llum.Core.getCore();
-				bool ret=client.is_acl_thread_alive(core.user_info,"NetFoldersManager");
-				if(ret)
-					return 0;
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.is_acl_thread_alive(core.user_info,"NetFoldersManager");
+				
+				if(Convert.ToInt32(new_ret["status"])==0)
+				{
+					if((bool)new_ret["return"])
+						return 0;
+					else
+						return 1;
+
+
+				}
 				else
-					return -1;
+				{
+					Console.WriteLine((string)new_ret["msg"]);
+					return -2;
+				}
+				
+
 			}
 			catch(Exception e)
 			{

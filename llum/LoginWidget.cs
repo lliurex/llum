@@ -1,7 +1,7 @@
 
 using System;
 
-using CookComputing.XmlRpc.XmlRpcStruct;
+using CookComputing.XmlRpc;
 
 namespace llum
 {
@@ -43,8 +43,12 @@ namespace llum
 			
 			try
 			{
-			
-				CookComputing.XmlRpc.XmlRpcStruct ret=core.xmlrpc.client.login(user_info,"Golem",user_info);
+				string ret;
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=core.xmlrpc.client.login(user_info,"Golem",user_info);
+				if(Convert.ToInt32(new_ret["status"])==0)
+					ret=Convert.ToString(new_ret["return"]);
+				else
+					ret="false";
 				
 				if(ret.Contains("true"))
 				{
@@ -52,33 +56,40 @@ namespace llum
 					//core.function_list=core.xmlrpc.client.get_students_function_list(user_info,"Golem");
 					//Console.WriteLine(core.xmlrpc.client.get_students_function_list(user_info,"Golem"));
 					string[] tmp=ret.Split(' '); // tmp[1] contains group type [ students, teachers, admin, others ]
+					CookComputing.XmlRpc.XmlRpcStruct function_response;
 					core.user_info=user_info;
 					switch(tmp[1])
 					{
 						case "students":
-							core.function_list=core.xmlrpc.client.get_students_function_list(user_info,"Golem");
+							//function_response=core.xmlrpc.client.get_students_function_list(user_info,"Golem");
+							//core.function_list=function_response["return"];
 							core.set_function_list("students");
 							core.user_group="students";
 							break;
 						case "teachers":
-							core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
-							core.set_function_list("teachers");
+							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
+							//core.set_function_list("teachers");
 							core.user_group="teachers";
 							break;
 						case "admin":
-							core.function_list=core.xmlrpc.client.get_admin_function_list(user_info,"Golem");
+							//function_response=core.xmlrpc.client.get_admin_function_list(user_info,"Golem");
+							//Console.WriteLine(function_response["return"]);
+							//foreach(string str in (string[])function_response["return"])
+							//	Console.WriteLine(str);
+							
+							//core.function_list=()function_response["return"];
 							core.set_function_list("admin");
 							core.user_group="admin";
 							break;
 						
 						case "others":
-							core.function_list=core.xmlrpc.client.get_others_function_list(user_info,"Golem");
+							//core.function_list=core.xmlrpc.client.get_others_function_list(user_info,"Golem");
 							core.set_function_list("others");
 							core.user_group="others";
 							break;
 						
 						case "promoted-teacher":
-							core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
+							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
 							core.set_function_list("admin");
 							core.user_group="promoted-teacher";
 							break;

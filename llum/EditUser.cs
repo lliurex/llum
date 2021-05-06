@@ -217,34 +217,6 @@ namespace llum
 		
 		protected virtual void OnRemoveGroupButtonClicked (object sender, System.EventArgs e)
 		{
-			/*
-			Gtk.TreeIter iter;
-			bool ok=belongTreeview.Selection.GetSelected(out iter);
-			if (ok)
-			{
-				
-				available_store.AppendValues(belong_store.GetValue(iter,0));
-				string ret=llum.Core.getCore().xmlrpc.remove_from_group(user.uid,Convert.ToString(belong_store.GetValue(iter,0)));
-			
-				
-				if(ret=="true")
-				{
-					msgLabel.Markup="<b>" + Mono.Unix.Catalog.GetString("Group modification successful") + "</b>";
-					user.groups.Remove(Convert.ToString(belong_store.GetValue(iter,0)));
-					belong_store.Remove(ref iter);
-					
-				}
-				else
-				{
-					msgLabel.Markup="<span foreground='red'> Error: " + ret + "</span>";				
-				}
-				
-
-				
-			}	
-			*/
-
-			
 			
 			Gtk.TreePath[] path_array=belongTreeview.Selection.GetSelectedRows();
 			System.Collections.Generic.List<string>ret_list=new System.Collections.Generic.List<string>();
