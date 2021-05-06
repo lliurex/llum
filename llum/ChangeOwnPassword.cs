@@ -63,7 +63,13 @@ namespace llum
 			if(password1Entry.Text!="")
 			{	llum.Core core=llum.Core.getCore();
 				string out_response;
-				out_response=llum.Core.getCore().xmlrpc.client.change_own_password(core.user_info,"Golem",core.user_info,password1Entry.Text);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=llum.Core.getCore().xmlrpc.client.change_own_password(core.user_info,"Golem",core.user_info,password1Entry.Text);
+				if(Convert.ToInt32(new_ret["status"])==0)
+					out_response=(string)new_ret["return"];
+				else
+				{
+					out_response=(string)new_ret["msg"];
+				}
 				
 				if (out_response=="true")
 				{

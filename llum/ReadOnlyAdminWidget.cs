@@ -23,7 +23,7 @@ namespace llum
 			label.Show();
 			try
 			{
-				string basedn=llum.Core.getCore().xmlrpc.client.get_variable("","VariablesManager","LDAP_BASE_DN");
+				string basedn=(string)llum.Core.getCore().xmlrpc.client.get_variable("","VariablesManager","LDAP_BASE_DN")["return"];
 				dn_entry.Text=dn_entry.Text.Replace("%%LDAP_BASE_DN%%",basedn);
 
 			}
