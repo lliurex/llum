@@ -710,7 +710,6 @@ namespace llum
 			
 			try
 			{
-				System.Collections.Generic.List<CookComputing.XmlRpc.XmlRpcStruct> ret=new System.Collections.Generic.List<CookComputing.XmlRpc.XmlRpcStruct>();
 				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_all_passwords(core.user_info,"Golem");
 				if(Convert.ToInt32(new_ret["status"])==0)
 				{
@@ -721,8 +720,9 @@ namespace llum
 						ret.Add(item);
 					}
 				
-					return ret;
+					
 				}
+				return ret;
 			}
 			catch
 			{
@@ -747,8 +747,9 @@ namespace llum
 						ret.Add(item);
 					}
 				
-					return ret;
+					
 				}
+				return ret;
 			}
 			catch
 			{
@@ -775,8 +776,9 @@ namespace llum
 						ret.Add(item);
 					}
 				
-					return ret;
+					
 				}
+				return ret;
 			}
 			catch
 			{
@@ -870,7 +872,7 @@ namespace llum
 			
 			try
 			{
-				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.generic_teacher_to_itaca(core.user_info,"Golem",uid,nia);
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.generic_teacher_to_itaca(core.user_info,"Golem",uid,nif);
 				if(Convert.ToInt32(new_ret["status"])!=0)
 					ret="XMLRPC ERROR";
 				else
@@ -933,6 +935,8 @@ namespace llum
 							
 						}
 					}
+					
+					return Mono.Unix.Catalog.GetString("N4D Call failed.");	
 					
 
 				}
@@ -1376,7 +1380,7 @@ namespace llum
 			
 			try
 			{
-				return client.get_methods()["return"];
+				return (string)client.get_methods()["return"];
 			}
 			catch(Exception e)
 			{
@@ -1408,6 +1412,7 @@ namespace llum
 					else
 						return(false);
 				}
+				return(false);
 			}
 			catch(Exception e)
 			{
