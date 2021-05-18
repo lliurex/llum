@@ -103,10 +103,12 @@ namespace llum
 				Gtk.Application.Invoke(delegate{
 					
 					
-					if(status==-1)
+					if(status==1)
 						msg_label.Markup="<b>"+Mono.Unix.Catalog.GetString("ACLs restored")+"</b>";
 					else
+					{
 						msg_label.Markup="<span foreground='red'>" + Mono.Unix.Catalog.GetString("ACLs restoration failed") + "</span>";
+					}
 						
 					llum.Core.getCore().progress_window.Hide();
 						

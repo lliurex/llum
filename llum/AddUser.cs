@@ -33,16 +33,6 @@ namespace llum
 			groups_store=new Gtk.ListStore(typeof(string),typeof(int));
 			groups_store.AppendValues ("---",0);
 			
-			System.Collections.Generic.List<string> group_list=llum.Core.getCore().xmlrpc.get_available_groups();
-			foreach(string grp in group_list)
-			{
-					groups_store.AppendValues(grp,1);
-			}
-			
-			groupCombobox.Model=groups_store;
-			groupCombobox.Active=0;
-			
-			
 			label=new Gtk.Label(Mono.Unix.Catalog.GetString("Add User"));
 			label.Show();						
 
@@ -61,6 +51,14 @@ namespace llum
 			llum.Core.getCore().add_user_wid=new AddUser();
 			
 			llum.Core.getCore().mw.setCurrentWidget(llum.Core.getCore().add_user_wid);
+			System.Collections.Generic.List<string> group_list=llum.Core.getCore().xmlrpc.get_available_groups();
+			foreach(string grp in group_list)
+			{
+					groups_store.AppendValues(grp,1);
+			}
+			
+			groupCombobox.Model=groups_store;
+			groupCombobox.Active=0;
 		}			
 		
 		protected virtual void OnAcceptButtonClicked (object sender, System.EventArgs e)

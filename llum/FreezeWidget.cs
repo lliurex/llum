@@ -81,50 +81,7 @@ namespace llum
 			
 			disable_gui();
 			
-			System.Threading.ThreadStart tstart=delegate{
-			
-				group_list=llum.Core.getCore().xmlrpc.get_available_groups_info();
-				group_list_str=new System.Collections.Generic.List<string>();
-				foreach(llum.LdapGroup grp in group_list)
-					group_list_str.Add(grp.gid);
-			
-				user_list=llum.Core.getCore().xmlrpc.get_user_list();
-				
-				user_list_str=new System.Collections.Generic.List<string>();
-				foreach(llum.LdapUser user in user_list)
-				{
-					if(user.main_group=="students")
-						user_list_str.Add(user.uid);		
-				}
-				
-			
-				Gtk.Application.Invoke(delegate{
-					if (user_list==null)
-						msgLabel.Markup="<span foreground='red'>" + Mono.Unix.Catalog.GetString("There was an error connecting to the n4d(XMLRPC) server") + "</span>";
-					else
-						msgLabel.Text="";
-					enable_gui();
-					searchImage.Visible=false;
-					try
-					{
-						populate_available_groups_treeview();
-						populate_available_users_treeview();
-					}
-					catch(Exception e)
-					{
-						Console.WriteLine(e);
-					}
-					
-				});
-				
-				
-				
-				
-			};
-			
-			System.Threading.Thread thread=new System.Threading.Thread(tstart);
-			
-			thread.Start();
+
 			
 			
 		}
@@ -199,8 +156,57 @@ namespace llum
 		public void OnMenuButtonClicked(object sender, System.EventArgs e)
 		{
 			llum.Core.getCore().freeze_wid=new FreezeWidget();
-			
 			llum.Core.getCore().mw.setCurrentWidget(llum.Core.getCore().freeze_wid);
+			
+			
+		
+			System.Threading.ThreadStart tstart=delegate{
+			
+				llum.Core.getCore().freeze_wid.group_list=llum.Core.getCore().xmlrpc.get_available_groups_info();
+				llum.Core.getCore().freeze_wid.group_list_str=new System.Collections.Generic.List<string>();
+				foreach(llum.LdapGroup grp in llum.Core.getCore().freeze_wid.group_list)
+					llum.Core.getCore().freeze_wid.group_list_str.Add(grp.gid);
+			
+				llum.Core.getCore().freeze_wid.user_list=llum.Core.getCore().xmlrpc.get_user_list();
+				
+				llum.Core.getCore().freeze_wid.user_list_str=new System.Collections.Generic.List<string>();
+				foreach(llum.LdapUser user in llum.Core.getCore().freeze_wid.user_list)
+				{
+					if(user.main_group=="students")
+						llum.Core.getCore().freeze_wid.user_list_str.Add(user.uid);		
+				}
+				
+			
+				Gtk.Application.Invoke(delegate{
+					if (llum.Core.getCore().freeze_wid.user_list==null)
+						llum.Core.getCore().freeze_wid.msgLabel.Markup="<span foreground='red'>" + Mono.Unix.Catalog.GetString("There was an error connecting to the n4d(XMLRPC) server") + "</span>";
+					else
+						llum.Core.getCore().freeze_wid.msgLabel.Text="";
+					llum.Core.getCore().freeze_wid.enable_gui();
+					llum.Core.getCore().freeze_wid.searchImage.Visible=false;
+					try
+					{
+						llum.Core.getCore().freeze_wid.populate_available_groups_treeview();
+						llum.Core.getCore().freeze_wid.populate_available_users_treeview();
+					}
+					catch(Exception ex)
+					{
+						Console.WriteLine(ex);
+					}
+					
+				});
+				
+				
+				
+				
+			};
+			
+			System.Threading.Thread thread=new System.Threading.Thread(tstart);
+			
+			thread.Start();
+			
+			
+			
 		}		
 		
 		protected virtual void OnFreezeGroupButtonClicked (object sender, System.EventArgs e)
