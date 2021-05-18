@@ -41,26 +41,8 @@ namespace llum
 			search_mode = 0;
 			
 
-			System.Threading.ThreadStart tstart=delegate{
+
 			
-				user_list=llum.Core.getCore().xmlrpc.get_user_list();
-				
-			};
-			
-			System.Threading.Thread thread=new System.Threading.Thread(tstart);			
-			thread.Start();
-			
-			
-			System.Collections.Generic.List<string> groups=llum.Core.getCore().xmlrpc.get_available_groups();
-			
-			groupsCombobox.AppendText(Mono.Unix.Catalog.GetString("All"));
-			
-			foreach(string group_name in groups)
-			{
-					groupsCombobox.AppendText(group_name);
-			}
-			
-			groupsCombobox.Active=0;
 			
 			if(llum.Core.getCore().user_group=="teachers")
 			{
@@ -77,6 +59,28 @@ namespace llum
 			llum.Core.getCore().pass_list_wid=new PasswordListWidget();
 			
 			llum.Core.getCore().mw.setCurrentWidget(llum.Core.getCore().pass_list_wid);
+			
+			System.Collections.Generic.List<string> groups=llum.Core.getCore().xmlrpc.get_available_groups();
+			llum.Core.getCore().pass_list_wid.groupsCombobox.AppendText(Mono.Unix.Catalog.GetString("All"));
+			foreach(string group_name in groups)
+			{
+				llum.Core.getCore().pass_list_wid.groupsCombobox.AppendText(group_name);
+			}
+			
+			llum.Core.getCore().pass_list_wid.groupsCombobox.Active=0;
+
+			
+			System.Threading.ThreadStart tstart=delegate{
+			
+				user_list=llum.Core.getCore().xmlrpc.get_user_list();
+			};
+			
+			System.Threading.Thread thread=new System.Threading.Thread(tstart);			
+			thread.Start();
+			
+
+			
+			
 		}		
 		
 		protected virtual void OnGenerateButtonClicked (object sender, System.EventArgs e)

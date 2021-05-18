@@ -14,6 +14,17 @@ namespace llum
 			
 			llum.Core.getCore().add_generic_users_wid=new AddGenericUsersWidget();
 			llum.Core.getCore().mw.setCurrentWidget(llum.Core.getCore().add_generic_users_wid);
+			llum.Core.getCore().add_generic_users_wid.group_list=llum.Core.getCore().xmlrpc.get_available_groups();
+			foreach(string str in llum.Core.getCore().add_generic_users_wid.group_list)
+				llum.Core.getCore().add_generic_users_wid.groupCombobox.AppendText(str);
+			
+			if(llum.Core.getCore().add_generic_users_wid.group_list.Capacity>0)
+				llum.Core.getCore().add_generic_users_wid.groupCombobox.Active=0;
+			else
+			{
+				llum.Core.getCore().add_generic_users_wid.acceptButton.Sensitive=false;
+				llum.Core.getCore().add_generic_users_wid.msgLabel.Markup="<b>" + Mono.Unix.Catalog.GetString("You must create a group before adding generic users") + "</b>";
+			}
 		}		
 		
 		
@@ -26,17 +37,7 @@ namespace llum
 		public AddGenericUsersWidget ()
 		{
 			this.Build ();
-			group_list=llum.Core.getCore().xmlrpc.get_available_groups();
-			foreach(string str in group_list)
-				groupCombobox.AppendText(str);
-			
-			if(group_list.Capacity>0)
-				groupCombobox.Active=0;
-			else
-			{
-				acceptButton.Sensitive=false;
-				msgLabel.Markup="<b>" + Mono.Unix.Catalog.GetString("You must create a group before adding generic users") + "</b>";
-			}
+
 			
 			store=new Gtk.TreeStore(typeof(string),typeof(string));
 			

@@ -113,7 +113,7 @@ namespace llum
 		[XmlRpcMethod]
 		CookComputing.XmlRpc.XmlRpcStruct get_methods();
 		[XmlRpcMethod]
-		CookComputing.XmlRpc.XmlRpcStruct get_variable(string user_info,string class_name,string variable_name);
+		CookComputing.XmlRpc.XmlRpcStruct get_variable(string variable_name);
 		[XmlRpcMethod]
 		CookComputing.XmlRpc.XmlRpcStruct export_llum_info(string[] user_info,string class_name);
 		[XmlRpcMethod]
@@ -175,7 +175,7 @@ namespace llum
 		{
 			try
 			{
-				return (string)client.get_variable("","VariablesManager","MASTER_SERVER_IP")["return"];
+				return (string)client.get_variable("MASTER_SERVER_IP")["return"];
 			}
 			catch
 			{
@@ -193,8 +193,11 @@ namespace llum
 			System.Array groups=((System.Array)new_ret["return"]);
 			System.Collections.Generic.List<string> group_list=new System.Collections.Generic.List<string>();
 			foreach(CookComputing.XmlRpc.XmlRpcStruct item in groups)
+			{
 				group_list.Add(((string[])item["cn"])[0]);
+			}
 		
+			
 			return group_list;
 			
 			
@@ -1131,18 +1134,22 @@ namespace llum
 			try
 			{
 				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_frozen_groups(core.user_info,"Golem");
+				Console.WriteLine(1);
 				if(Convert.ToInt32(new_ret["status"])==0)
 				{
-					string[] ret_strings=(string[])new_ret["return"];
-					foreach(string str in ret_strings)
-						ret.Add(str);
+					if(((System.Object[])new_ret["return"]).Length>0)
+					{
+						string[] ret_strings=(string[])new_ret["return"];
+						foreach(string str in ret_strings)
+							ret.Add(str);
+					}
 				}
 				return ret;
 			}
-			catch
+			catch(Exception e)
 			{
 				Console.WriteLine("get_frozen_groups not ready");
-				//Console.WriteLine(e);
+				Console.WriteLine(e);
 				return ret;	
 			}
 			
@@ -1156,9 +1163,12 @@ namespace llum
 				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.get_frozen_users(llum.Core.getCore().user_info,"Golem");	
 				if(Convert.ToInt32(new_ret["status"])==0)
 				{
-					string[] ret_strings=(string[])new_ret["return"];
-					foreach(string str in ret_strings)
-						ret.Add(str);
+					if(((System.Object[])new_ret["return"]).Length>0)
+					{
+						string[] ret_strings=(string[])new_ret["return"];
+						foreach(string str in ret_strings)
+							ret.Add(str);
+					}
 				}
 				
 				return ret;
@@ -1308,7 +1318,6 @@ namespace llum
 				}
 				else
 				{
-					Console.WriteLine((string)new_ret["msg"]);
 					return -2;
 				}
 				
@@ -1375,17 +1384,17 @@ namespace llum
 			}
 		}
 		
-		public string get_methods()
+		public CookComputing.XmlRpc.XmlRpcStruct get_methods()
 		{
 			
 			try
 			{
-				return (string)client.get_methods()["return"];
+				return (CookComputing.XmlRpc.XmlRpcStruct)client.get_methods()["return"];
 			}
 			catch(Exception e)
 			{
 				Console.WriteLine(e);
-				return "";	
+				return null;	
 			}
 		}
 

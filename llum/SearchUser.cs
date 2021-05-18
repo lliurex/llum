@@ -65,116 +65,12 @@ namespace llum
 		{
 			store.Clear();
 			
-			// old uid-filter only			
-			/*
-			if(searchEntry.Text!="")
-			{
-				llum.Core core=llum.Core.getCore();
-				System.Array array;
-				if(!searchEntry.Text.Contains("*"))
-					array=core.xmlrpc.client.get_user_list(core.user_info,"Golem",searchEntry.Text+"*");
-				else
-				{
-					string query=searchEntry.Text.Replace("*","");
-					query=query+"*";
-					array=core.xmlrpc.client.get_user_list(core.user_info,"Golem",query);
-					
-				}
-				
-				
-				user_list=new System.Collections.Generic.List<llum.LdapUser>();
-				foreach(object a in array)
-				{
-					//Console.WriteLine(a.GetType());
-					store.AppendValues(((CookComputing.XmlRpc.XmlRpcStruct)a)["uid"]);
-					Object[] groups_object=(Object[])((CookComputing.XmlRpc.XmlRpcStruct)a)["groups"];
-					string[] groups=new string[groups_object.Length];
-					int i=0;
-					foreach(Object a2 in groups_object)
-					{
-						groups[i]=Convert.ToString(a2);
-						Console.WriteLine(a2);
-						i++;
-					}
-					
-					
-					
-					foreach(Object tmp in ((CookComputing.XmlRpc.XmlRpcStruct)a).Keys)
-					{
-					
-						Console.WriteLine(tmp);	
-					}
-					
-					Console.WriteLine("---------------------");
-					
-					
-					LdapUser user=new LdapUser(Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["path"]),
-					                          Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["uid"]),
-					                           Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["uidNumber"]),
-					                          Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["cn"]),
-					                           Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["sn"]),
-					                           groups,
-					                           Convert.ToString(((CookComputing.XmlRpc.XmlRpcStruct)a)["profile"]));
-					                           
-					
-					
-					
-					
-					user_list.Add(user);
-					
-					
-					
-					
-					
-				}
-				//Console.WriteLine("////// END ///////");
-				Console.WriteLine(user_list.Capacity);
-			}
-				*/
-			
-			//llum.Core core=llum.Core.getCore();
-			/*
-			user_list=new System.Collections.Generic.List<llum.LdapUser>();
-			
-			
-			System.Array array=core.xmlrpc.client.get_user_list(core.user_info,"Golem","*");
-			foreach(CookComputing.XmlRpc.XmlRpcStruct item in array)
-			{
-				
-			
-				
-				LdapUser user=new LdapUser(
-				                           Convert.ToString(item["path"]),
-				                           Convert.ToString(item["uid"]),
-				                           Convert.ToString(item["uidNumber"]),
-				                           Convert.ToString(item["cn"]),
-				                           Convert.ToString(item["sn"]),
-				                           get_groups(item),
-				                           Convert.ToString(item["profile"]));
-				
-				
-				                           
-				 user_list.Add(user);
-         
-				
-				
-			}
-			
-			
-			*/
-			
-			
+
 			if(!thread.IsAlive)
 			{
 				populate_treeview(searchEntry.Text);
 				
 			}
-			
-			
-			
-			
-			
-			
 			
 			
 		}
@@ -367,8 +263,7 @@ namespace llum
 				core.mw.setCurrentWidget(core.edit_user_wid);
 				
 			}
-			else
-				Console.WriteLine(":((");
+
 			
 		}
 		

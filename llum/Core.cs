@@ -232,16 +232,13 @@ namespace llum
 					mw.addMenuButton(button);
 				
 					
-					if (xmlrpc.get_methods().Contains("get_frozen_users"))
-					{
-						freeze_wid=new FreezeWidget();
-						available_widgets.Add(freeze_wid);
-						button=create_button(freeze_wid.label,freeze_wid.image);
-						button.Clicked+=freeze_wid.OnMenuButtonClicked;
-						mw.addMenuButton(button);			
-					}
-					
-				
+					freeze_wid=new FreezeWidget();
+					available_widgets.Add(freeze_wid);
+					button=create_button(freeze_wid.label,freeze_wid.image);
+					button.Clicked+=freeze_wid.OnMenuButtonClicked;
+					mw.addMenuButton(button);			
+									
+									
 					pass_list_wid=new PasswordListWidget();
 					available_widgets.Add(pass_list_wid);
 					button=create_button(pass_list_wid.label,pass_list_wid.image);
