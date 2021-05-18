@@ -1,3 +1,9 @@
+llum (3.34) focal; urgency=medium
+
+  * Fixes in errors found up until now. Needs more testing
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 18 May 2021 13:32:44 +0200
+
 llum (3.33) focal; urgency=medium
 
   * All n4d calls have been migrated to n4d > 0.900. Testing time
