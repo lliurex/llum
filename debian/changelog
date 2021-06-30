@@ -1,3 +1,9 @@
+llum (3.35) focal; urgency=medium
+
+  * Fixed adduser.groups_combobox
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 30 Jun 2021 12:50:09 +0200
+
 llum (3.34) focal; urgency=medium
 
   * Fixes in errors found up until now. Needs more testing
