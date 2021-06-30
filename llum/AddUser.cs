@@ -54,11 +54,11 @@ namespace llum
 			System.Collections.Generic.List<string> group_list=llum.Core.getCore().xmlrpc.get_available_groups();
 			foreach(string grp in group_list)
 			{
-					groups_store.AppendValues(grp,1);
+					llum.Core.getCore().add_user_wid.groups_store.AppendValues(grp,1);
 			}
 			
-			groupCombobox.Model=groups_store;
-			groupCombobox.Active=0;
+			llum.Core.getCore().add_user_wid.groupCombobox.Model=llum.Core.getCore().add_user_wid.groups_store;
+			llum.Core.getCore().add_user_wid.groupCombobox.Active=0;
 		}			
 		
 		protected virtual void OnAcceptButtonClicked (object sender, System.EventArgs e)
@@ -68,19 +68,13 @@ namespace llum
 			templateCombobox.GetActiveIter(out iter);
 			llum.Core core=llum.Core.getCore();
 			string ret="";
-			
+
 			CookComputing.XmlRpc.XmlRpcStruct user_properties=new CookComputing.XmlRpc.XmlRpcStruct();
-			
+	
 			user_properties["uid"]=uidEntry.Text;
 			user_properties["cn"]=nameEntry.Text;
 			user_properties["sn"]=surnameEntry.Text;
 			user_properties["userPassword"]=passwordEntry.Text;
-			
-			/*
-			
-			
-			
-			*/
 			
 			
 			switch((int)store.GetValue(iter,1))
@@ -97,6 +91,7 @@ namespace llum
 						user_properties["x-lliurex-usertype"]="generic";
 				
 					ret=core.xmlrpc.add_user("Students",user_properties);
+					
 					if (ret.Contains("true:"))
 					{
 						msgLabel.Text=Mono.Unix.Catalog.GetString("User created successfully");
@@ -164,7 +159,6 @@ namespace llum
 				
 			}
 			
-			
 			if(ret.Contains("true:"))
 			{
 				Gtk.TreeIter iter2;
@@ -175,6 +169,7 @@ namespace llum
 					case 1:	
 						try
 						{
+							Console.WriteLine("5");
 							core.xmlrpc.add_to_group((string)user_properties["uid"],(string)groups_store.GetValue(iter2,0));
 						}
 						catch

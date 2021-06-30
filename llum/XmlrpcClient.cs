@@ -442,7 +442,9 @@ namespace llum
 				if(ret.ContainsKey("status"))
 					if(Convert.ToInt32(ret["status"])==0)
 						old_ret=Convert.ToString(ret["return"]);
-						
+				else
+					old_ret="XMLRP ERROR";
+					
 			}
 			catch(Exception e)
 			{
