@@ -798,12 +798,17 @@ namespace llum
 			llum.Core core=llum.Core.getCore();
 			CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_students(core.user_info,"Golem",delete_data);
 			if(Convert.ToInt32(new_ret["status"])==0)
-			{
-				string[] ret_array=(string[])new_ret["return"];
-				foreach(string str in ret_array)
+			{	
+				try
 				{
-					ret_list.Add(str);	
+					string[] ret_array=(string[])new_ret["return"];
+					foreach(string str in ret_array)
+					{
+						ret_list.Add(str);	
+					}
 				}
+				catch
+					return ret_list;
 			}
 			
 			return ret_list;
@@ -817,11 +822,16 @@ namespace llum
 			CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_teachers(core.user_info,"Golem",delete_data);
 			if(Convert.ToInt32(new_ret["status"])==0)
 			{
-				string[] ret_array=(string[])new_ret["return"];
-				foreach(string str in ret_array)
+				try
 				{
-					ret_list.Add(str);	
+					string[] ret_array=(string[])new_ret["return"];
+					foreach(string str in ret_array)
+					{
+						ret_list.Add(str);	
+					}
 				}
+				catch
+					return ret_list;
 			}
 			
 			return ret_list;
@@ -835,11 +845,16 @@ namespace llum
 			CookComputing.XmlRpc.XmlRpcStruct new_ret=client.delete_all(core.user_info,"Golem",delete_data);
 			if(Convert.ToInt32(new_ret["status"])==0)
 			{
-				string[] ret_array=(string[])new_ret["return"];
-				foreach(string str in ret_array)
+				try
 				{
-					ret_list.Add(str);	
+					string[] ret_array=(string[])new_ret["return"];
+					foreach(string str in ret_array)
+					{
+						ret_list.Add(str);	
+					}
 				}
+				catch
+					return ret_list;
 			}
 			
 			return ret_list;
@@ -1018,31 +1033,39 @@ namespace llum
 			llum.Core core=llum.Core.getCore();	
 			try
 			{
-				CookComputing.XmlRpc.XmlRpcStruct ret=client.gescen_full(core.user_info,"Golem");
+				CookComputing.XmlRpc.XmlRpcStruct new_ret=client.gescen_full(core.user_info,"Golem");
 				System.Collections.Generic.List<LdapUser> ret_list=new System.Collections.Generic.List<LdapUser>();
 					
-				foreach(string str in ret.Keys)
+				if(Convert.ToInt32(new_ret["status"])==0)
 				{
-				
-					string path="";
-					string uid=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["uid"];
-					string uidn=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["uidNumber"];
-					string name=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["cn"];
-					string surname=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["sn"];
-					string[] groups=null;
-					string profile=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["profile"];
-					string user_type="";
-					string nia="";
-					string dni="";
+					CookComputing.XmlRpc.XmlRpcStruct ret=(CookComputing.XmlRpc.XmlRpcStruct)new_ret["return"];
+					foreach(string str in ret.Keys)
+					{
 					
-					
-					LdapUser user=new LdapUser(path,uid,uidn,name,surname,groups,profile,user_type,nia,dni,false);
-					user.ok_to_delete=true;
-					ret_list.Add(user);
-					
-					
+						string path="";
+						string uid=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["uid"];
+						string uidn=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["uidNumber"];
+						string name=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["cn"];
+						string surname=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["sn"];
+						string[] groups=null;
+						string profile=(string)((CookComputing.XmlRpc.XmlRpcStruct)ret[str])["profile"];
+						string user_type="";
+						string nia="";
+						string dni="";
+						
+						
+						LdapUser user=new LdapUser(path,uid,uidn,name,surname,groups,profile,user_type,nia,dni,false);
+						user.ok_to_delete=true;
+						ret_list.Add(user);
+						
+						
+					}
+					return ret_list;
+
 				}
-				return ret_list;
+				else
+					return null;
+				
 			}
 			catch(Exception e)
 			{
