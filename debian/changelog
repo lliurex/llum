@@ -1,3 +1,10 @@
+llum (3.36) focal; urgency=medium
+
+  * Fixed delete_* functions
+  * Added itaca/gescen support
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 06 Jul 2021 13:54:26 +0200
+
 llum (3.35) focal; urgency=medium
 
   * Fixed adduser.groups_combobox
