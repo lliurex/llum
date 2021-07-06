@@ -807,8 +807,9 @@ namespace llum
 						ret_list.Add(str);	
 					}
 				}
-				catch
+				catch{
 					return ret_list;
+				}
 			}
 			
 			return ret_list;
@@ -831,7 +832,9 @@ namespace llum
 					}
 				}
 				catch
+				{
 					return ret_list;
+				}
 			}
 			
 			return ret_list;
@@ -854,7 +857,9 @@ namespace llum
 					}
 				}
 				catch
+				{
 					return ret_list;
+				}
 			}
 			
 			return ret_list;
