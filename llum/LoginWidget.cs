@@ -60,17 +60,7 @@ namespace llum
 					core.user_info=user_info;
 					switch(tmp[1])
 					{
-						case "students":
-							//function_response=core.xmlrpc.client.get_students_function_list(user_info,"Golem");
-							//core.function_list=function_response["return"];
-							core.set_function_list("students");
-							core.user_group="students";
-							break;
-						case "teachers":
-							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
-							//core.set_function_list("teachers");
-							core.user_group="teachers";
-							break;
+						
 						case "admin":
 							//function_response=core.xmlrpc.client.get_admin_function_list(user_info,"Golem");
 							//Console.WriteLine(function_response["return"]);
@@ -80,18 +70,31 @@ namespace llum
 							//core.function_list=()function_response["return"];
 							core.set_function_list("admin");
 							core.user_group="admin";
+							break;						
+
+						case "promoted-teacher":
+							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
+							core.set_function_list("admin");
+							core.user_group="promoted-teacher";
+							break;
+						
+						case "students":
+							//function_response=core.xmlrpc.client.get_students_function_list(user_info,"Golem");
+							//core.function_list=function_response["return"];
+							core.set_function_list("students");
+							core.user_group="students";
+							break;
+						
+						case "teachers":
+							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
+							core.set_function_list("teachers");
+							core.user_group="teachers";
 							break;
 						
 						case "others":
 							//core.function_list=core.xmlrpc.client.get_others_function_list(user_info,"Golem");
 							core.set_function_list("others");
 							core.user_group="others";
-							break;
-						
-						case "promoted-teacher":
-							//core.function_list=core.xmlrpc.client.get_teachers_function_list(user_info,"Golem");
-							core.set_function_list("admin");
-							core.user_group="promoted-teacher";
 							break;
 						
 						default:
