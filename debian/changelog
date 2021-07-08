@@ -1,3 +1,9 @@
+llum (3.37) focal; urgency=medium
+
+  * Fixed teachers functionality
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 08 Jul 2021 16:28:12 +0200
+
 llum (3.36) focal; urgency=medium
 
   * Fixed delete_* functions
