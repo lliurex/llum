@@ -72,7 +72,7 @@ namespace llum
 			
 			System.Threading.ThreadStart tstart=delegate{
 			
-				user_list=llum.Core.getCore().xmlrpc.get_user_list();
+				llum.Core.getCore().pass_list_wid.user_list=llum.Core.getCore().xmlrpc.get_user_list();
 			};
 			
 			System.Threading.Thread thread=new System.Threading.Thread(tstart);			
