@@ -1,3 +1,9 @@
+llum (3.40) focal; urgency=medium
+
+  * Fixed group filter in password list widget
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 13 Jul 2021 18:21:06 +0200
+
 llum (3.39) focal; urgency=medium
 
   * Re-enabling freeze widget
