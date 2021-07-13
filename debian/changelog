@@ -1,3 +1,9 @@
+llum (3.39) focal; urgency=medium
+
+  * Re-enabling freeze widget
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 13 Jul 2021 17:36:45 +0200
+
 llum (3.38) focal; urgency=medium
 
   * disabling freeze widget for now
