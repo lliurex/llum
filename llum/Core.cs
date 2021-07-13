@@ -230,17 +230,12 @@ namespace llum
 					button=create_button(add_group_wid.label, add_group_wid.image);
 					button.Clicked+=add_group_wid.OnMenuButtonClicked;
 					mw.addMenuButton(button);
-				
-					/*
-					
-					// DISABLED FOR NOW
-					
+
 					freeze_wid=new FreezeWidget();
 					available_widgets.Add(freeze_wid);
 					button=create_button(freeze_wid.label,freeze_wid.image);
 					button.Clicked+=freeze_wid.OnMenuButtonClicked;
 					mw.addMenuButton(button);			
-					*/				
 									
 					pass_list_wid=new PasswordListWidget();
 					available_widgets.Add(pass_list_wid);
